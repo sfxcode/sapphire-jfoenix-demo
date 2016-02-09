@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.StackPane?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.FlowPane?>
+<?import com.jfoenix.controls.JFXToolbar?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.transitions.hamburger.HamburgerBackArrowBasicTransition?>
+<?import com.jfoenix.controls.JFXRippler?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXPopup?>
+<?import javafx.scene.layout.BorderPane?>
+
+<?import java.net.URL?>
+<?import org.controlsfx.control.StatusBar?>
+<StackPane fx:id="root" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="com.sfxcode.sapphire.jfoenix.demo.controller.MainWindowController" minHeight="800" minWidth="1000">
+    <MenuBar VBox.vgrow="NEVER" fx:id="menuBar">
+        <menus>
+            <Menu mnemonicParsing="false" text="File">
+                <items>
+                    <MenuItem mnemonicParsing="false" text="New" />
+                    <MenuItem mnemonicParsing="false" text="Open…" />
+                    <Menu mnemonicParsing="false" text="Open Recent" />
+                    <SeparatorMenuItem mnemonicParsing="false" />
+                    <MenuItem mnemonicParsing="false" text="Close" />
+                    <MenuItem mnemonicParsing="false" text="Save" />
+                    <MenuItem mnemonicParsing="false" text="Save As…" />
+                    <MenuItem mnemonicParsing="false" text="Revert" />
+                    <SeparatorMenuItem mnemonicParsing="false" />
+                    <MenuItem mnemonicParsing="false" text="Preferences…" />
+                    <SeparatorMenuItem mnemonicParsing="false" />
+                    <MenuItem mnemonicParsing="false" text="Quit" />
+                </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Edit">
+                <items>
+                    <MenuItem mnemonicParsing="false" text="Undo" />
+                    <MenuItem mnemonicParsing="false" text="Redo" />
+                    <SeparatorMenuItem mnemonicParsing="false" />
+                    <MenuItem mnemonicParsing="false" text="Cut" />
+                    <MenuItem mnemonicParsing="false" text="Copy" />
+                    <MenuItem mnemonicParsing="false" text="Paste" />
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                    <SeparatorMenuItem mnemonicParsing="false" />
+                    <MenuItem mnemonicParsing="false" text="Select All" />
+                    <MenuItem mnemonicParsing="false" text="Unselect All" />
+                </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+                <items>
+                    <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
+                </items>
+            </Menu>
+        </menus>
+    </MenuBar>
+    <!-- Header -->
+    <BorderPane>
+
+        <top>
+            <VBox spacing="20">
+                <JFXToolbar >
+                    <leftItems>
+                        <JFXRippler maskType="CIRCLE" style="-fx-ripple-color:WHITE;">
+                            <StackPane fx:id="titleBurgerContainer">
+                                <JFXHamburger fx:id="titleBurger">
+                                    <HamburgerBackArrowBasicTransition />
+                                </JFXHamburger>
+                            </StackPane>
+                        </JFXRippler>
+                        <Label>Sapphire JFoenix Demo</Label>
+                    </leftItems>
+                    <rightItems>
+                        <StackPane fx:id="rightToolbarPane">
+
+                        </StackPane>
+                    </rightItems>
+                </JFXToolbar>
+            </VBox>
+        </top>
+
+        <!-- Content Area -->
+        <center>
+            <JFXDrawer fx:id="drawer" defaultDrawerSize="250" direction="LEFT">
+                <styleClass>
+                    <String fx:value="body" />
+                </styleClass>
+                <sidePane>
+                    <StackPane fx:id="sideContentPane">
+                    </StackPane>
+                </sidePane>
+                <content>
+                    <StackPane fx:id="workspacePane" >
+                    </StackPane>
+                </content>
+            </JFXDrawer>
+        </center>
+
+    <bottom>
+        <StackPane fx:id="statusPane">
+        <StatusBar/>
+    </StackPane>
+    </bottom>
+    </BorderPane>
+
+
+
+    <stylesheets>
+        <URL value="@main.css"/>
+    </stylesheets>
+
+</StackPane>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+        maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+            AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"
+            fx:controller="com.sfxcode.sapphire.jfoenix.demo.controller.tab.FirstTabController">
+    <children>
+        <Label fx:id="infoLabel" layoutX="79.0" layoutY="126.0" text="First Tab with own Controller"/>
+    </children>
+    <stylesheets>
+        <URL value="@main.css"/>
+    </stylesheets>
+</AnchorPane>

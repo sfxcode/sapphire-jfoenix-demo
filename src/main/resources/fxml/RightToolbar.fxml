@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Label?>
+<?import java.lang.String?>
+<?import com.jfoenix.controls.JFXListView?>
+
+<?import java.net.URL?>
+<?import com.jfoenix.controls.JFXToolbar?>
+<?import com.jfoenix.controls.JFXRippler?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.transitions.hamburger.HamburgerBackArrowBasicTransition?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import com.jfoenix.controls.JFXPopup?>
+<?import com.jfoenix.controls.JFXDialogLayout?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDialog?>
+<StackPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="com.sfxcode.sapphire.jfoenix.demo.controller.RightToolbarController">
+
+    <JFXRippler fx:id="optionsRippler" maskType="CIRCLE"
+                style="-fx-ripple-color:WHITE;">
+        <StackPane fx:id="optionsBurger">
+            <JFXHamburger styleClass="jfx-options-burger">
+            </JFXHamburger>
+        </StackPane>
+    </JFXRippler>
+    <JFXPopup fx:id="toolbarPopup" styleClass="tool-bar-popup">
+        <JFXListView styleClass="option-list-view">
+            <Label fx:id="contactLabel">
+                Contact Us
+                <graphic>
+                    <FontAwesomeIconView glyphName="USER" size="1.5em" style=";"
+                                         styleClass="option-jfx-list-view-icon"/>
+                </graphic>
+            </Label>
+            <Label fx:id="exit">
+                Exit
+                <graphic>
+                    <FontAwesomeIconView glyphName="REPLY" size="1.5em" style=";"
+                                         styleClass="option-jfx-list-view-icon"/>
+                </graphic>
+            </Label>
+        </JFXListView>
+    </JFXPopup>
+
+    <stylesheets>
+        <URL value="@main.css"/>
+    </stylesheets>
+</StackPane>

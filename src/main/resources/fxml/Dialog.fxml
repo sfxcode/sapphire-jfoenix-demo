@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Label?>
+<?import java.lang.String?>
+<?import com.jfoenix.controls.JFXListView?>
+
+<?import java.net.URL?>
+<?import com.jfoenix.controls.JFXToolbar?>
+<?import com.jfoenix.controls.JFXRippler?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.transitions.hamburger.HamburgerBackArrowBasicTransition?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import com.jfoenix.controls.JFXPopup?>
+<?import com.jfoenix.controls.JFXDialogLayout?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDialog?>
+<StackPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="com.sfxcode.sapphire.jfoenix.demo.controller.DialogController">
+
+    <JFXDialog fx:id="dialog">
+        <JFXDialogLayout>
+            <heading>
+                <Label fx:id="dialogHeading"/>
+            </heading>
+            <body>
+                <Label fx:id="dialogText"/>
+            </body>
+            <actions>
+                <JFXButton fx:id="denyButton" styleClass="dialog-deny" text="Deny"/>
+                <JFXButton fx:id="acceptButton" styleClass="dialog-accept" text="Accept"/>
+            </actions>
+        </JFXDialogLayout>
+    </JFXDialog>
+    <stylesheets>
+        <URL value="@main.css"/>
+    </stylesheets>
+</StackPane>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Label?>
+<?import java.lang.String?>
+<?import com.jfoenix.controls.JFXListView?>
+
+<?import java.net.URL?>
+<StackPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+		   fx:controller="com.sfxcode.sapphire.jfoenix.demo.controller.SideMenuController">
+	<styleClass>
+		<String fx:value="side-menu" />
+	</styleClass>
+	<JFXListView  fx:id="sideList">
+		<Label>Menu 1</Label>
+		<Label>Menu 2</Label>
+		<Label>Menu 3</Label>
+		<Label>Menu 4</Label>
+
+	</JFXListView>
+	<stylesheets>
+		<URL value="@main.css"/>
+	</stylesheets>
+</StackPane>
