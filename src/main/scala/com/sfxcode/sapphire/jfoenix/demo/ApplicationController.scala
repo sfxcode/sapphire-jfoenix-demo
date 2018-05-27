@@ -3,7 +3,6 @@ package com.sfxcode.sapphire.jfoenix.demo
 import javax.enterprise.context.ApplicationScoped
 import javax.enterprise.inject.Produces
 import javax.inject.Named
-
 import com.sfxcode.sapphire.jfoenix.demo.controller.MainWindowController
 import com.sfxcode.sapphire.core.controller.AppController
 import com.typesafe.config.ConfigFactory
@@ -22,8 +21,14 @@ class ApplicationController extends AppController {
     replaceSceneContent(mainWindowController)
   }
 
+  def replacePrimarySceneContent(): Unit = {
+    val newMainWindowController = getController[MainWindowController]()
+    replaceSceneContent(newMainWindowController)
+  }
+
+
   @Produces
-  def emptyName: ApplicationName = {
+  def applicationName: ApplicationName = {
     ApplicationName(conf.getString("application.name"))
   }
 }

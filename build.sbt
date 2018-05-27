@@ -1,42 +1,28 @@
-import no.vedaadata.sbtjavafx.JavaFXPlugin.JFX
+
 
 name := "sapphire-jfoenix-demo"
 
 organization := "com.sfxcode.sapphire"
 
-version := "0.1.0-SNAPSHOT"
+resolvers += "sfxcode-bintray" at "https://dl.bintray.com/sfxcode/maven"
 
-scalaVersion := "2.11.7"
+scalaVersion := "2.12.6"
 
-javacOptions ++= Seq("-source", "1.8", "-target", "1.8")
+libraryDependencies += "org.specs2" %% "specs2-core" % "4.2.0" % "test"
 
-scalacOptions += "-target:jvm-1.7"
+libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.2.3"
 
-javacOptions ++= Seq("-source", "1.8", "-target", "1.8")
+libraryDependencies +=   "com.sfxcode.sapphire" %% "sapphire-extension" % "0.7.4"
 
-scalacOptions += "-target:jvm-1.7"
+libraryDependencies += "com.jfoenix" % "jfoenix" % "1.11.1"
 
-resolvers ++= Seq(
-  "sonatype-snapshots" at "https://oss.sonatype.org/content/repositories/snapshots/"
-)
+libraryDependencies += "eu.hansolo" % "Medusa" % "8.0"
 
 
-mainClass := Some("com.sfxcode.sapphire.jfoenix.demo.Application")
+enablePlugins(BuildInfoPlugin)
 
-libraryDependencies += "org.specs2" %% "specs2-core" % "3.7" % "test"
+buildInfoPackage := "com.sfxcode.sapphire.jfoenix.demo"
 
-libraryDependencies +=   "com.sfxcode.sapphire" %% "sapphire-core" % "1.1.0"
+buildInfoOptions += BuildInfoOption.BuildTime
 
-libraryDependencies += "de.jensd" % "fontawesomefx" % "8.9"
-
-libraryDependencies += "org.controlsfx" % "controlsfx" % "8.40.10"
-
-libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.1.3"
-
-
-jfxSettings
-
-JFX.mainClass := Some("com.sfxcode.sapphire.jfoenix.demo.Application")
-
-JFX.nativeBundles := "none"
 

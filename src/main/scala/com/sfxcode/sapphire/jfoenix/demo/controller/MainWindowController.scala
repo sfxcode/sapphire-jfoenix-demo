@@ -1,16 +1,14 @@
 package com.sfxcode.sapphire.jfoenix.demo.controller
 
-import javafx.event.{Event, EventHandler}
-import javafx.fxml.FXML
-import javafx.scene.control.MenuBar
-import javafx.scene.layout.StackPane
-import javax.enterprise.event.Observes
-
+import com.jfoenix.controls.events.JFXDrawerEvent
 import com.jfoenix.controls.{JFXDrawer, JFXHamburger}
 import com.sfxcode.sapphire.core.controller.ViewController
 import com.sfxcode.sapphire.core.scene.{ContentDidChangeEvent, ContentManager}
 import com.typesafe.scalalogging.LazyLogging
-
+import javafx.fxml.FXML
+import javafx.scene.control.MenuBar
+import javafx.scene.layout.StackPane
+import javax.enterprise.event.Observes
 import scalafx.Includes._
 import scalafx.event.ActionEvent
 import scalafx.scene.input.MouseEvent
@@ -38,7 +36,6 @@ class MainWindowController extends ViewController with LazyLogging {
   lazy val statusBarController = getController[StatusBarController]()
   lazy val rightToolbarController = getController[RightToolbarController]()
 
-  lazy val dialogController = getController[DialogController]()
 
   var workspaceManager: ContentManager = _
   var sideMenuManager: ContentManager = _
@@ -56,35 +53,31 @@ class MainWindowController extends ViewController with LazyLogging {
     statusBarManager = ContentManager(statusPane, this, statusBarController)
     rightToolbarManager = ContentManager(rightToolbarPane, this, rightToolbarController)
 
-    dialogController.closeDialog()
+    //dialogController.closeDialog()
 
+    drawer.setOnDrawerOpening((event: JFXDrawerEvent) => {
 
-    drawer.setOnDrawingAction(new EventHandler[Event] {
-      override def handle(event: Event): Unit = {
-        titleBurger.getAnimation.setRate(1)
-        titleBurger.getAnimation.onFinished = (e: ActionEvent) => {
-          counter = 1
-        }
-        titleBurger.getAnimation.play()
+      titleBurger.getAnimation.setRate(1)
+      titleBurger.getAnimation.onFinished = (e: ActionEvent) => {
+        counter = 1
       }
+      titleBurger.getAnimation.play()
     })
 
-    drawer.setOnHidingAction(new EventHandler[Event] {
-      override def handle(event: Event): Unit = {
-        titleBurger.getAnimation.setRate(-1)
-        titleBurger.getAnimation.onFinished = (e: ActionEvent) => {
-          counter = 0
-        }
-        titleBurger.getAnimation.play()
+    drawer.setOnDrawerClosing((event: JFXDrawerEvent) => {
+      titleBurger.getAnimation.setRate(-1)
+      titleBurger.getAnimation.onFinished = (e: ActionEvent) => {
+        counter = 0
       }
+      titleBurger.getAnimation.play()
     })
 
     titleBurgerContainer.onMouseClicked = (e: MouseEvent) => {
       if (counter == 0) {
-        drawer.draw()
+        drawer.open()
       }
       else if (counter == 1)
-        drawer.hide()
+        drawer.close()
       counter = -1
     }
 

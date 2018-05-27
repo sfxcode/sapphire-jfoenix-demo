@@ -9,7 +9,7 @@
             AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"
             fx:controller="com.sfxcode.sapphire.jfoenix.demo.controller.tab.FirstTabController">
     <children>
-        <Label fx:id="infoLabel" layoutX="79.0" layoutY="126.0" text="First Tab with own Controller"/>
+        <Label fx:id="infoLabel"  text="First Tab with own Controller"/>
     </children>
     <stylesheets>
         <URL value="@main.css"/>

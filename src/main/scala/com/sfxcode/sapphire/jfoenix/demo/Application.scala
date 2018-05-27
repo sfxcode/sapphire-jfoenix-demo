@@ -11,13 +11,13 @@ import scalafx.stage.Stage
 
 object Application extends FXApp {
 
-  JFXApp.AUTO_SHOW = true
+  JFXApp.AutoShow = true
 
   override def applicationStage:Stage  = {
 
     val conf = ConfigFactory.load()
     val stage = new PrimaryStage {
-      title = "%s (%s)".format(conf.getString("project.name"), conf.getString("project.version"))
+      title = "%s (%s)".format(conf.getString("project.name"), BuildInfo.version)
       minHeight = 800
       minWidth = 1000
       scene = new Scene {
@@ -25,8 +25,9 @@ object Application extends FXApp {
     }
 
     val scene = new Scene(new StackPane(), 800,800)
-    scene.stylesheets.add(Application.getClass.getResource("/resources/css/jfoenix-design.css").toExternalForm)
-    scene.stylesheets.add(Application.getClass.getResource("/resources/css/jfoenix-fonts.css").toExternalForm)
+    scene.stylesheets.add(Application.getClass.getResource("/css/jfoenix-design.css").toExternalForm)
+    scene.stylesheets.add(Application.getClass.getResource("/css/jfoenix-fonts.css").toExternalForm)
+
     stage.scene = scene
     stage
 
