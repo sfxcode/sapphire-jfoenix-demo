@@ -18,7 +18,7 @@ class RightToolbarController extends AbstractViewController {
 
   var toolbarPopup: JFXPopup = _
 
-  lazy val rightToolbarPopupController = getController[RightToolbarPopupController]()
+  lazy val rightToolbarPopupController: RightToolbarPopupController = getController[RightToolbarPopupController]()
 
   override def didGainVisibilityFirstTime(): Unit = {
 

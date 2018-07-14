@@ -1,11 +1,11 @@
 package com.sfxcode.sapphire.jfoenix.demo
 
+import com.sfxcode.sapphire.core.controller.AppController
+import com.sfxcode.sapphire.jfoenix.demo.controller.MainWindowController
+import com.typesafe.config.ConfigFactory
 import javax.enterprise.context.ApplicationScoped
 import javax.enterprise.inject.Produces
 import javax.inject.Named
-import com.sfxcode.sapphire.jfoenix.demo.controller.MainWindowController
-import com.sfxcode.sapphire.core.controller.AppController
-import com.typesafe.config.ConfigFactory
 
 
 @Named

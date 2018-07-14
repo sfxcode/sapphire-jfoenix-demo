@@ -8,11 +8,11 @@ resolvers += "sfxcode-bintray" at "https://dl.bintray.com/sfxcode/maven"
 
 scalaVersion := "2.12.6"
 
-libraryDependencies += "org.specs2" %% "specs2-core" % "4.2.0" % "test"
+libraryDependencies += "org.specs2" %% "specs2-core" % "4.3.2" % "test"
 
 libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.2.3"
 
-libraryDependencies +=   "com.sfxcode.sapphire" %% "sapphire-extension" % "0.7.4"
+libraryDependencies +=   "com.sfxcode.sapphire" %% "sapphire-extension" % "0.7.6"
 
 libraryDependencies += "com.jfoenix" % "jfoenix" % "1.11.1"
 
