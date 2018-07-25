@@ -16,36 +16,28 @@
     </center>
     <center>
         <JFXTabPane fx:id="tabPane" BorderPane.alignment="CENTER">
-            <tabs>
-                <Tab text="First Tab">
-                    <content>
-                        <VBox>
-                        <Label fx:id="applicationNameLabel">
-                        <padding>
-                           <Insets left="10.0" top="10.0" />
-                        </padding></Label>
-                        <StackPane fx:id="firstTab">
-                        </StackPane>
-                        </VBox>
-                    </content>
-                </Tab>
-                <Tab text="Second Tab">
-                    <content>
-                        <StackPane fx:id="secondTab">
-                        </StackPane>
-                    </content>
-                </Tab>
-                <Tab text="Third Tab">
-                    <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                     <children>
-                        <MaterialDesignIconView layoutX="131.0" layoutY="71.0" size="36" />
-                        <Label layoutX="44.0" layoutY="101.0" text="Third Tab without custom controller" />
-                     </children></AnchorPane>
-                    </content>
-                </Tab>
-            </tabs>
 
+            <Tab text="First Tab">
+                <VBox>
+                <Label fx:id="applicationNameLabel">
+                    <padding>
+                        <Insets left="10.0" top="10.0"/>
+                    </padding>
+                </Label>
+                <StackPane fx:id="firstTab">
+                </StackPane>
+                </VBox>
+            </Tab>
+            <Tab text="Second Tab">
+                <StackPane fx:id="secondTab">
+                </StackPane>
+            </Tab>
+            <Tab text="Third Tab">
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <MaterialDesignIconView layoutX="131.0" layoutY="71.0" size="36"/>
+                    <Label layoutX="44.0" layoutY="101.0" text="Third Tab without custom controller"/>
+                </AnchorPane>
+            </Tab>
         </JFXTabPane>
     </center>
 

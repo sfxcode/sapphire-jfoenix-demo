@@ -334,6 +334,15 @@
 	-fx-text-fill: WHITE;
 }
 
+.custom-jfx-button-raised2 {
+	-fx-font-size: 12.0px;
+	-jfx-button-type: RAISED;
+	-fx-background-color: rgb(102.0, 153.0, 102.0);
+	-fx-pref-width: 200.0;
+	-fx-text-fill: WHITE;
+}
+
+
 /*******************************************************************************
 *                                                                              *
 * JFX Check Box                                                                *
