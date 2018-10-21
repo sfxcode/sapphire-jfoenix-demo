@@ -25,8 +25,6 @@ object Application extends FXApp {
     }
 
     val scene = new Scene(new StackPane(), 800,800)
-    scene.stylesheets.add(Application.getClass.getResource("/css/jfoenix-design.css").toExternalForm)
-    scene.stylesheets.add(Application.getClass.getResource("/css/jfoenix-fonts.css").toExternalForm)
 
     stage.scene = scene
     stage

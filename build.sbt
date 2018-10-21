@@ -7,15 +7,15 @@ organization := "com.sfxcode.sapphire"
 
 resolvers += "sfxcode-bintray" at "https://dl.bintray.com/sfxcode/maven"
 
-scalaVersion := "2.12.6"
+scalaVersion := "2.12.7"
 
-libraryDependencies += "org.specs2" %% "specs2-core" % "4.3.2" % "test"
+libraryDependencies += "org.specs2" %% "specs2-core" % "4.3.5" % "test"
 
 libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.2.3"
 
-libraryDependencies +=   "com.sfxcode.sapphire" %% "sapphire-extension" % "0.7.6"
+libraryDependencies +=   "com.sfxcode.sapphire" %% "sapphire-extension" % "0.8.1"
 
-libraryDependencies += "com.jfoenix" % "jfoenix" % "1.11.1"
+libraryDependencies += "com.jfoenix" % "jfoenix" % "9.0.6"
 
 libraryDependencies += "eu.hansolo" % "Medusa" % "8.0"
 

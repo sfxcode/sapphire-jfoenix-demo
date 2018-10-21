@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXTabPane?>
-<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Tab?>
@@ -34,7 +33,6 @@
             </Tab>
             <Tab text="Third Tab">
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                    <MaterialDesignIconView layoutX="131.0" layoutY="71.0" size="36"/>
                     <Label layoutX="44.0" layoutY="101.0" text="Third Tab without custom controller"/>
                 </AnchorPane>
             </Tab>
