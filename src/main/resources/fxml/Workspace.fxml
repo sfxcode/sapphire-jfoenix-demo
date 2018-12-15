@@ -9,6 +9,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
+<?import java.net.URL?>
 <BorderPane xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sfxcode.sapphire.jfoenix.demo.controller.WorkspaceController">
     <center>
 
@@ -18,7 +19,7 @@
 
             <Tab text="First Tab">
                 <VBox>
-                <Label fx:id="applicationNameLabel">
+                <Label styleClass="application-label" fx:id="applicationNameLabel">
                     <padding>
                         <Insets left="10.0" top="10.0"/>
                     </padding>
@@ -33,10 +34,13 @@
             </Tab>
             <Tab text="Third Tab">
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                    <Label layoutX="44.0" layoutY="101.0" text="Third Tab without custom controller"/>
+                    <Label styleClass="info-label" layoutX="44.0" layoutY="101.0" text="Third Tab without custom controller"/>
                 </AnchorPane>
             </Tab>
         </JFXTabPane>
     </center>
-
+    <stylesheets>
+        <URL value="@../css/jfoenix.css"/>
+        <URL value="@../css/main.css"/>
+    </stylesheets>
 </BorderPane>

@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <?import java.net.URL?>
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 
-<?import com.jfoenix.controls.JFXButton?>
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sfxcode.sapphire.jfoenix.demo.controller.tab.FirstTabController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sfxcode.sapphire.jfoenix.demo.controller.tab.FirstTabController">
 
-         <top>
-              <Label fx:id="infoLabel" text="First Tab with own Controller !" BorderPane.alignment="CENTER" />
-         </top>
-         <center>
-            <HBox prefHeight="100.0" prefWidth="400.0" spacing="10.0" BorderPane.alignment="CENTER">
-               <children>
-                  <TextField fx:id="inputTextField"/>
-                  <JFXButton mnemonicParsing="false" text="Update Label above" minWidth="200" onAction="#actionUpdateLabel" styleClass="custom-jfx-button-raised2" />
-               </children>
-               <BorderPane.margin>
-                  <Insets left="5.0" top="5.0" />
-               </BorderPane.margin>
-            </HBox>
-         </center>
+    <top>
+        <Label styleClass="info-label" fx:id="infoLabel" text="First Tab with own Controller !" BorderPane.alignment="CENTER" />
+    </top>
+    <center>
+        <HBox prefHeight="100.0" prefWidth="400.0" spacing="10.0" BorderPane.alignment="CENTER">
+            <children>
+                <TextField fx:id="inputTextField" />
+                <JFXButton minWidth="200" mnemonicParsing="false" onAction="#actionUpdateLabel" styleClass="custom-jfx-button-raised2" text="Update Label above " />
+            </children>
+            <BorderPane.margin>
+                <Insets left="5.0" top="5.0" />
+            </BorderPane.margin>
+        </HBox>
+    </center>
     <stylesheets>
-        <URL value="@main.css" />
+        <URL value="@../css/jfoenix.css" />
+        <URL value="@../css/main.css" />
     </stylesheets>
 </BorderPane>

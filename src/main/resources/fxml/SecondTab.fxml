@@ -6,8 +6,9 @@
 <StackPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
 
            fx:controller="com.sfxcode.sapphire.jfoenix.demo.controller.tab.SecondTabController">
-    <Label fx:id="infoLabel" text="Second Tab with own Controller"/>
+    <Label styleClass="warn-label" fx:id="infoLabel" text="Second Tab with own Controller"/>
     <stylesheets>
-        <URL value="@main.css"/>
+        <URL value="@../css/jfoenix.css"/>
+        <URL value="@../css/main.css"/>
     </stylesheets>
 </StackPane>

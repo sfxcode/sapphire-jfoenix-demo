@@ -4,8 +4,11 @@ import com.sfxcode.sapphire.jfoenix.demo.controller.base.AbstractViewController
 
 class SecondTabController extends AbstractViewController {
 
-  override def didGainVisibilityFirstTime() {
-}
+  override def didGainVisibilityFirstTime(): Unit = {
+
+    //
+
+  }
 
 
 }

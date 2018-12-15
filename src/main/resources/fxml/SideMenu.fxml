@@ -21,6 +21,7 @@
 
 	</JFXListView>
 	<stylesheets>
-		<URL value="@main.css"/>
+		<URL value="@../css/jfoenix.css"/>
+		<URL value="@../css/main.css"/>
 	</stylesheets>
 </StackPane>

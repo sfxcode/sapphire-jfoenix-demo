@@ -1,0 +1,18 @@
+.application-label {
+    -fx-font-size: 48.0px;
+    -fx-padding: 32.0px;
+    -fx-text-fill: #798fd1;
+}
+
+.info-label {
+    -fx-font-size: 32.0px;
+    -fx-padding: 14.0px;
+    -fx-background-color: #03a9f4;
+}
+
+.warn-label {
+    -fx-font-size: 32.0px;
+    -fx-padding: 14.0px;
+    -fx-background-color: #03a9f4;
+    -fx-text-fill: #D34336;
+}

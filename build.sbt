@@ -7,17 +7,27 @@ organization := "com.sfxcode.sapphire"
 
 resolvers += "sfxcode-bintray" at "https://dl.bintray.com/sfxcode/maven"
 
-scalaVersion := "2.12.7"
+scalaVersion := "2.12.8"
 
-libraryDependencies += "org.specs2" %% "specs2-core" % "4.3.5" % "test"
+libraryDependencies += "org.specs2" %% "specs2-core" % "4.3.5" % Test
 
-libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.2.3"
+// Sapphire
 
-libraryDependencies +=   "com.sfxcode.sapphire" %% "sapphire-extension" % "0.8.1"
+libraryDependencies +=   "com.sfxcode.sapphire" %% "sapphire-core" % "1.4.3"
 
-libraryDependencies += "com.jfoenix" % "jfoenix" % "9.0.6"
+libraryDependencies +=   "com.sfxcode.sapphire" %% "sapphire-extension" % "0.8.3.1"
+
+// UI Kits
+
+libraryDependencies += "com.jfoenix" % "jfoenix" % "9.0.8"
 
 libraryDependencies += "eu.hansolo" % "Medusa" % "8.0"
+
+// 
+
+libraryDependencies += "org.json4s" %% "json4s-native" % "3.6.2" 
+
+libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.2.3"
 
 
 enablePlugins(BuildInfoPlugin)
