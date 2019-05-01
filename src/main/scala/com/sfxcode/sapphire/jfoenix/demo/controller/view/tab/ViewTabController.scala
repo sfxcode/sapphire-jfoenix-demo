@@ -1,16 +1,15 @@
-package com.sfxcode.sapphire.jfoenix.demo.controller
+package com.sfxcode.sapphire.jfoenix.demo.controller.view.tab
 
 import com.sfxcode.sapphire.core.scene.ContentManager
 import com.sfxcode.sapphire.jfoenix.demo.ApplicationName
 import com.sfxcode.sapphire.jfoenix.demo.controller.base.AbstractTabController
-import com.sfxcode.sapphire.jfoenix.demo.controller.tab.{FirstTabController, SecondTabController}
 import javafx.fxml.FXML
 import javafx.scene.control._
 import javafx.scene.layout._
 import javax.inject.Inject
 import scalafx.Includes._
 
-class WorkspaceController extends AbstractTabController {
+class ViewTabController extends AbstractTabController {
   lazy val firstTabController = getController[FirstTabController]()
   lazy val secondTabController = getController[SecondTabController]()
 

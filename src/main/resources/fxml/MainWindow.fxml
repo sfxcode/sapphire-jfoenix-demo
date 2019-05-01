@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXDrawer?>
 <?import com.jfoenix.controls.JFXHamburger?>
 <?import com.jfoenix.controls.JFXRippler?>
@@ -17,42 +18,44 @@
 <?import javafx.scene.layout.VBox?>
 <?import org.controlsfx.control.StatusBar?>
 
-<StackPane fx:id="root" minHeight="800" minWidth="1000" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sfxcode.sapphire.jfoenix.demo.controller.MainWindowController">
+<StackPane fx:id="root" minHeight="800" minWidth="1000" xmlns="http://javafx.com/javafx/11.0.1"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="com.sfxcode.sapphire.jfoenix.demo.controller.MainWindowController">
     <MenuBar fx:id="menuBar" VBox.vgrow="NEVER">
         <menus>
             <Menu mnemonicParsing="false" text="File">
                 <items>
-                    <MenuItem mnemonicParsing="false" text="New" />
-                    <MenuItem mnemonicParsing="false" text="Open…" />
-                    <Menu mnemonicParsing="false" text="Open Recent" />
-                    <SeparatorMenuItem mnemonicParsing="false" />
-                    <MenuItem mnemonicParsing="false" text="Close" />
-                    <MenuItem mnemonicParsing="false" text="Save" />
-                    <MenuItem mnemonicParsing="false" text="Save As…" />
-                    <MenuItem mnemonicParsing="false" text="Revert" />
-                    <SeparatorMenuItem mnemonicParsing="false" />
-                    <MenuItem mnemonicParsing="false" text="Preferences…" />
-                    <SeparatorMenuItem mnemonicParsing="false" />
-                    <MenuItem mnemonicParsing="false" text="Quit" />
+                    <MenuItem mnemonicParsing="false" text="New"/>
+                    <MenuItem mnemonicParsing="false" text="Open…"/>
+                    <Menu mnemonicParsing="false" text="Open Recent"/>
+                    <SeparatorMenuItem mnemonicParsing="false"/>
+                    <MenuItem mnemonicParsing="false" text="Close"/>
+                    <MenuItem mnemonicParsing="false" text="Save"/>
+                    <MenuItem mnemonicParsing="false" text="Save As…"/>
+                    <MenuItem mnemonicParsing="false" text="Revert"/>
+                    <SeparatorMenuItem mnemonicParsing="false"/>
+                    <MenuItem mnemonicParsing="false" text="Preferences…"/>
+                    <SeparatorMenuItem mnemonicParsing="false"/>
+                    <MenuItem mnemonicParsing="false" text="Quit"/>
                 </items>
             </Menu>
             <Menu mnemonicParsing="false" text="Edit">
                 <items>
-                    <MenuItem mnemonicParsing="false" text="Undo" />
-                    <MenuItem mnemonicParsing="false" text="Redo" />
-                    <SeparatorMenuItem mnemonicParsing="false" />
-                    <MenuItem mnemonicParsing="false" text="Cut" />
-                    <MenuItem mnemonicParsing="false" text="Copy" />
-                    <MenuItem mnemonicParsing="false" text="Paste" />
-                    <MenuItem mnemonicParsing="false" text="Delete" />
-                    <SeparatorMenuItem mnemonicParsing="false" />
-                    <MenuItem mnemonicParsing="false" text="Select All" />
-                    <MenuItem mnemonicParsing="false" text="Unselect All" />
+                    <MenuItem mnemonicParsing="false" text="Undo"/>
+                    <MenuItem mnemonicParsing="false" text="Redo"/>
+                    <SeparatorMenuItem mnemonicParsing="false"/>
+                    <MenuItem mnemonicParsing="false" text="Cut"/>
+                    <MenuItem mnemonicParsing="false" text="Copy"/>
+                    <MenuItem mnemonicParsing="false" text="Paste"/>
+                    <MenuItem mnemonicParsing="false" text="Delete"/>
+                    <SeparatorMenuItem mnemonicParsing="false"/>
+                    <MenuItem mnemonicParsing="false" text="Select All"/>
+                    <MenuItem mnemonicParsing="false" text="Unselect All"/>
                 </items>
             </Menu>
             <Menu mnemonicParsing="false" text="Help">
                 <items>
-                    <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
+                    <MenuItem mnemonicParsing="false" text="About MyHelloApp"/>
                 </items>
             </Menu>
         </menus>
@@ -67,19 +70,23 @@
                         <JFXRippler maskType="CIRCLE" style="-fx-ripple-color:WHITE;">
                             <StackPane fx:id="titleBurgerContainer">
                                 <JFXHamburger fx:id="titleBurger">
-                                    <HamburgerBackArrowBasicTransition />
+                                    <HamburgerBackArrowBasicTransition/>
                                 </JFXHamburger>
                             </StackPane>
                         </JFXRippler>
+                        <JFXButton text="View" styleClass="main-menu-button"/>
+                        <JFXButton text="Editor" styleClass="main-menu-button"/>
                     </leftItems>
                     <rightItems>
                         <StackPane fx:id="rightToolbarPane">
 
                         </StackPane>
                     </rightItems>
-               <center>
+                    <center>
                         <Label BorderPane.alignment="CENTER">Sapphire JFoenix Demo</Label>
-               </center>
+                    </center>
+                    <left>
+                    </left>
                 </JFXToolbar>
             </VBox>
         </top>
@@ -88,7 +95,7 @@
         <center>
             <JFXDrawer fx:id="drawer" defaultDrawerSize="250" direction="LEFT">
                 <styleClass>
-                    <String fx:value="body" />
+                    <String fx:value="body"/>
                 </styleClass>
                 <sidePane>
                     <StackPane fx:id="sideContentPane">
@@ -101,13 +108,12 @@
             </JFXDrawer>
         </center>
 
-    <bottom>
-        <StackPane fx:id="statusPane">
-        <StatusBar />
-    </StackPane>
-    </bottom>
+        <bottom>
+            <StackPane fx:id="statusPane">
+                <StatusBar/>
+            </StackPane>
+        </bottom>
     </BorderPane>
-
 
 
     <stylesheets>

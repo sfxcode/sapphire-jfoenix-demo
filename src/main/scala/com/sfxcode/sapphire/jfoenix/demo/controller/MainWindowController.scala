@@ -4,6 +4,8 @@ import com.jfoenix.controls.events.JFXDrawerEvent
 import com.jfoenix.controls.{JFXDrawer, JFXHamburger}
 import com.sfxcode.sapphire.core.controller.ViewController
 import com.sfxcode.sapphire.core.scene.{ContentDidChangeEvent, ContentManager}
+import com.sfxcode.sapphire.jfoenix.demo.controller.view.ViewNavigationController
+import com.sfxcode.sapphire.jfoenix.demo.controller.view.tab.ViewTabController
 import com.typesafe.scalalogging.LazyLogging
 import javafx.fxml.FXML
 import javafx.scene.control.MenuBar
@@ -31,7 +33,9 @@ class MainWindowController extends ViewController with LazyLogging {
   @FXML var drawer: JFXDrawer = _
 
 
-  lazy val workspaceController = getController[WorkspaceController]()
+  lazy val viewNavigationController = getController[ViewNavigationController]()
+
+
   lazy val sideMenuController = getController[SideMenuController]()
   lazy val statusBarController = getController[StatusBarController]()
   lazy val rightToolbarController = getController[RightToolbarController]()
@@ -39,8 +43,6 @@ class MainWindowController extends ViewController with LazyLogging {
 
   var workspaceManager: ContentManager = _
   var sideMenuManager: ContentManager = _
-  var statusBarManager: ContentManager = _
-  var rightToolbarManager: ContentManager = _
 
   private var counter: Int = 0
 
@@ -48,10 +50,12 @@ class MainWindowController extends ViewController with LazyLogging {
     menuBar.setUseSystemMenuBar(true)
 
 
-    workspaceManager = ContentManager(workspacePane, this, workspaceController)
+    workspaceManager = ContentManager(workspacePane, this, viewNavigationController)
+
     sideMenuManager = ContentManager(sideContentPane, this, sideMenuController)
-    statusBarManager = ContentManager(statusPane, this, statusBarController)
-    rightToolbarManager = ContentManager(rightToolbarPane, this, rightToolbarController)
+
+    updatePaneContent(statusPane, statusBarController)
+    updatePaneContent(rightToolbarPane, rightToolbarController)
 
     //dialogController.closeDialog()
 

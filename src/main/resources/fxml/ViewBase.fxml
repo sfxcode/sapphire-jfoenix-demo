@@ -10,11 +10,9 @@
 <?import javafx.scene.layout.VBox?>
 
 <?import java.net.URL?>
-<BorderPane xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sfxcode.sapphire.jfoenix.demo.controller.WorkspaceController">
-    <center>
+<StackPane xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="com.sfxcode.sapphire.jfoenix.demo.controller.view.tab.ViewTabController">
 
-    </center>
-    <center>
         <JFXTabPane fx:id="tabPane" BorderPane.alignment="CENTER">
 
             <Tab text="First Tab">
@@ -38,9 +36,8 @@
                 </AnchorPane>
             </Tab>
         </JFXTabPane>
-    </center>
     <stylesheets>
         <URL value="@../css/jfoenix.css"/>
         <URL value="@../css/main.css"/>
     </stylesheets>
-</BorderPane>
+</StackPane>

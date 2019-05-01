@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.*?>
+
+<?import java.net.URL?>
+<BorderPane xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.sfxcode.sapphire.jfoenix.demo.controller.view.ViewNavigationController">
+    <center>
+        <StackPane fx:id="navigationContentPane"/>
+    </center>
+    <top>
+        <VBox BorderPane.alignment="CENTER">
+            <VBox spacing="10" id="toolbarBox">
+                <JFXToolbar maxHeight="32" fx:id="toolbar">
+                    <leftItems>
+                        <JFXButton styleClass="navigation-menu" onAction="#actionShowTab" text="Tab Example" fx:id="tabButton"/>
+                    </leftItems>
+                    <rightItems>
+
+                    </rightItems>
+                </JFXToolbar>
+            </VBox>
+            <Separator prefWidth="200.0"/>
+        </VBox>
+    </top>
+    <bottom>
+
+    </bottom>
+
+    <stylesheets>
+        <URL value="@../css/jfoenix.css"/>
+        <URL value="@../css/main.css"/>
+    </stylesheets>
+</BorderPane>
+
