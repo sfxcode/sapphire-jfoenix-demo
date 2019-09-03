@@ -8,7 +8,7 @@ import com.typesafe.scalalogging.LazyLogging
 
 abstract class AbstractViewController extends ViewController with LazyLogging{
 
-  def applicationController:ApplicationController =   applicationEnvironment.applicationController.asInstanceOf[ApplicationController]
+  def applicationController:ApplicationController =   getBean[ApplicationController]()
 
   def mainWindowController: MainWindowController = {
     val mainWindowController = applicationEnvironment.getController[MainWindowController]

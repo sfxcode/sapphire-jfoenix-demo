@@ -5,7 +5,6 @@ import com.jfoenix.controls.{JFXDrawer, JFXHamburger}
 import com.sfxcode.sapphire.core.controller.ViewController
 import com.sfxcode.sapphire.core.scene.{ContentDidChangeEvent, ContentManager}
 import com.sfxcode.sapphire.jfoenix.demo.controller.view.ViewNavigationController
-import com.sfxcode.sapphire.jfoenix.demo.controller.view.tab.ViewTabController
 import com.typesafe.scalalogging.LazyLogging
 import javafx.fxml.FXML
 import javafx.scene.control.MenuBar
