@@ -7,7 +7,7 @@ organization := "com.sfxcode.sapphire"
 
 resolvers += "sfxcode-bintray" at "https://dl.bintray.com/sfxcode/maven"
 
-scalaVersion := "2.12.9"
+scalaVersion := "2.13.0"
 
 val JavaFXVersion = "12.0.2"
 
@@ -25,11 +25,11 @@ libraryDependencies += "org.specs2" %% "specs2-core" % "4.7.0" % Test
 
 // Sapphire
 
-libraryDependencies +=   "com.sfxcode.sapphire" %% "sapphire-core" % "1.6.4"
+libraryDependencies +=   "com.sfxcode.sapphire" %% "sapphire-core" % "1.6.6"
 
 libraryDependencies +=   "com.sfxcode.sapphire" %% "sapphire-extension" % "0.9.2"
 
-libraryDependencies += "org.scalafx" %% "scalafx" % "12.0.1-R17"
+libraryDependencies += "org.scalafx" %% "scalafx" % "12.0.2-R18"
 
 
 // UI Kits
