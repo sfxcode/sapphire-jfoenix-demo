@@ -7,9 +7,9 @@ organization := "com.sfxcode.sapphire"
 
 resolvers += "sfxcode-bintray" at "https://dl.bintray.com/sfxcode/maven"
 
-scalaVersion := "2.13.0"
+scalaVersion := "2.13.1"
 
-val JavaFXVersion = "12.0.2"
+val JavaFXVersion = "13"
 
 val osName = System.getProperty("os.name") match {
   case n if n.startsWith("Linux") => "linux"
@@ -21,13 +21,13 @@ val osName = System.getProperty("os.name") match {
 libraryDependencies ++= Seq("base", "controls", "fxml", "graphics", "media", "swing", "web").map(
   m => "org.openjfx" % s"javafx-$m" % JavaFXVersion classifier osName)
 
-libraryDependencies += "org.specs2" %% "specs2-core" % "4.7.0" % Test
+libraryDependencies += "org.specs2" %% "specs2-core" % "4.7.1" % Test
 
 // Sapphire
 
-libraryDependencies +=   "com.sfxcode.sapphire" %% "sapphire-core" % "1.6.6"
+libraryDependencies +=   "com.sfxcode.sapphire" %% "sapphire-core" % "1.6.7"
 
-libraryDependencies +=   "com.sfxcode.sapphire" %% "sapphire-extension" % "0.9.2"
+libraryDependencies +=   "com.sfxcode.sapphire" %% "sapphire-extension" % "1.0.0"
 
 libraryDependencies += "org.scalafx" %% "scalafx" % "12.0.2-R18"
 
@@ -36,7 +36,7 @@ libraryDependencies += "org.scalafx" %% "scalafx" % "12.0.2-R18"
 
 libraryDependencies += "com.jfoenix" % "jfoenix" % "9.0.9"
 
-libraryDependencies += "eu.hansolo" % "Medusa" % "11.1"
+libraryDependencies += "eu.hansolo" % "Medusa" % "11.2"
 
 // 
 
@@ -44,6 +44,7 @@ libraryDependencies += "org.json4s" %% "json4s-native" % "3.6.7"
 
 libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.2.3"
 
+mainClass := Some("com.sfxcode.sapphire.jfoenix.demo.Application")
 
 enablePlugins(BuildInfoPlugin)
 
