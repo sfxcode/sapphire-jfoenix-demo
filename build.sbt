@@ -9,7 +9,7 @@ resolvers += "sfxcode-bintray" at "https://dl.bintray.com/sfxcode/maven"
 
 scalaVersion := "2.13.1"
 
-val JavaFXVersion = "13"
+val JavaFXVersion = "13.0.1"
 
 val osName = System.getProperty("os.name") match {
   case n if n.startsWith("Linux") => "linux"
@@ -21,7 +21,7 @@ val osName = System.getProperty("os.name") match {
 libraryDependencies ++= Seq("base", "controls", "fxml", "graphics", "media", "swing", "web").map(
   m => "org.openjfx" % s"javafx-$m" % JavaFXVersion classifier osName)
 
-libraryDependencies += "org.specs2" %% "specs2-core" % "4.7.1" % Test
+libraryDependencies += "org.specs2" %% "specs2-core" % "4.8.0" % Test
 
 // Sapphire
 
