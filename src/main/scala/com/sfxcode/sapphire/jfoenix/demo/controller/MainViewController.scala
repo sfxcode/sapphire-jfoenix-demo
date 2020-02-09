@@ -15,7 +15,7 @@ import scalafx.event.ActionEvent
 import scalafx.scene.input.MouseEvent
 
 
-class MainWindowController extends ViewController with LazyLogging {
+class MainViewController extends ViewController with LazyLogging {
 
   @FXML var menuBar: MenuBar = _
 
@@ -84,10 +84,6 @@ class MainWindowController extends ViewController with LazyLogging {
       counter = -1
     }
 
-  }
-
-  def listenToChanges(@Observes event: ContentDidChangeEvent) {
-    logger.debug(event.toString)
   }
 
 }

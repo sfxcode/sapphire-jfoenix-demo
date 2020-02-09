@@ -1,7 +1,7 @@
 package com.sfxcode.sapphire.jfoenix.demo
 
-import com.sfxcode.sapphire.core.controller.AppController
-import com.sfxcode.sapphire.jfoenix.demo.controller.MainWindowController
+import com.sfxcode.sapphire.core.controller.DefaultWindowController
+import com.sfxcode.sapphire.jfoenix.demo.controller.MainViewController
 import com.sun.javafx.css.StyleManager
 import com.typesafe.config.ConfigFactory
 import javax.enterprise.context.ApplicationScoped
@@ -11,24 +11,24 @@ import javax.inject.Named
 
 @Named
 @ApplicationScoped
-class ApplicationController extends AppController {
+class ApplicationController extends DefaultWindowController {
   val conf = ConfigFactory.load()
 
   var lastNavigationControllerName = ""
 
 
-  lazy val mainWindowController = getController[MainWindowController]()
+  lazy val mainViewController = getController[MainViewController]()
 
   def applicationDidLaunch() {
     logger.info("start " + this)
     applicationEnvironment.loadResourceBundle("bundles/application")
-    replaceSceneContent(mainWindowController)
+    replaceSceneContent(mainViewController)
   }
 
   def replacePrimarySceneContent(): Unit = {
     StyleManager.getInstance().stylesheetContainerMap.clear()
-    val newMainWindowController = getController[MainWindowController]()
-    replaceSceneContent(newMainWindowController)
+    val newmainViewController = getController[MainViewController]()
+    replaceSceneContent(newmainViewController)
   }
 
 
