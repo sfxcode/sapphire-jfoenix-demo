@@ -25,9 +25,9 @@ libraryDependencies += "org.specs2" %% "specs2-core" % "4.8.3" % Test
 
 // Sapphire
 
-libraryDependencies +=   "com.sfxcode.sapphire" %% "sapphire-core" % "1.7.1"
+libraryDependencies +=   "com.sfxcode.sapphire" %% "sapphire-core" % "1.7.3"
 
-libraryDependencies +=   "com.sfxcode.sapphire" %% "sapphire-extension" % "1.0.2"
+libraryDependencies +=   "com.sfxcode.sapphire" %% "sapphire-extension" % "1.0.6"
 
 libraryDependencies += "org.scalafx" %% "scalafx" % "12.0.2-R18"
 

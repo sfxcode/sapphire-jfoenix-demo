@@ -10,13 +10,7 @@ abstract class AbstractViewController extends ViewController with LazyLogging{
 
   def applicationController:ApplicationController =   getBean[ApplicationController]()
 
-  def mainViewController: MainViewController = {
-    val mainViewController = getViewController[MainViewController]
-    if (mainViewController.isDefined)
-      mainViewController.get
-    else
-      null
-  }
+  def mainViewController: MainViewController = applicationController.mainViewController
 
   def statusBarController = mainViewController.statusBarController
 
