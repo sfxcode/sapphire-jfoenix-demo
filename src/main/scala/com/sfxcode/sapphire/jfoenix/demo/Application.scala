@@ -1,8 +1,8 @@
 package com.sfxcode.sapphire.jfoenix.demo
 
-import com.sfxcode.sapphire.core.{BuildInfo, ConfigValues}
-import com.sfxcode.sapphire.core.application.BaseApplication
-import com.sfxcode.sapphire.core.controller.BaseApplicationController
+import com.sfxcode.sapphire.javafx.{BuildInfo, ConfigValues}
+import com.sfxcode.sapphire.javafx.application.BaseApplication
+import com.sfxcode.sapphire.javafx.controller.BaseApplicationController
 
 object Application extends BaseApplication with ConfigValues {
 

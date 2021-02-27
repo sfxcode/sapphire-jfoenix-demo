@@ -2,8 +2,8 @@ package com.sfxcode.sapphire.jfoenix.demo.controller
 
 import com.jfoenix.controls.events.JFXDrawerEvent
 import com.jfoenix.controls.{JFXDrawer, JFXHamburger}
-import com.sfxcode.sapphire.core.controller.ViewController
-import com.sfxcode.sapphire.core.scene.{ContentDidChangeEvent, ContentManager}
+import com.sfxcode.sapphire.javafx.controller.ViewController
+import com.sfxcode.sapphire.javafx.scene.{ContentDidChangeEvent, ContentManager}
 import com.sfxcode.sapphire.jfoenix.demo.controller.view.ViewNavigationController
 import com.typesafe.scalalogging.LazyLogging
 import javafx.fxml.FXML

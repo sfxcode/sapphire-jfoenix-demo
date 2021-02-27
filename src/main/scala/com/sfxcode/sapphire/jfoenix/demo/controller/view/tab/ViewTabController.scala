@@ -1,7 +1,7 @@
 package com.sfxcode.sapphire.jfoenix.demo.controller.view.tab
 
-import com.sfxcode.sapphire.core.application.ApplicationEnvironment
-import com.sfxcode.sapphire.core.scene.ContentManager
+import com.sfxcode.sapphire.javafx.application.ApplicationEnvironment
+import com.sfxcode.sapphire.javafx.scene.ContentManager
 import com.sfxcode.sapphire.jfoenix.demo.{ApplicationController, ApplicationName}
 import com.sfxcode.sapphire.jfoenix.demo.controller.base.AbstractTabController
 import javafx.fxml.FXML

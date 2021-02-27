@@ -1,7 +1,7 @@
 package com.sfxcode.sapphire.jfoenix.demo
 
-import com.sfxcode.sapphire.core.application.ApplicationEnvironment
-import com.sfxcode.sapphire.core.controller.BaseApplicationController
+import com.sfxcode.sapphire.javafx.application.ApplicationEnvironment
+import com.sfxcode.sapphire.javafx.controller.BaseApplicationController
 import com.sfxcode.sapphire.jfoenix.demo.controller.MainViewController
 import com.sun.javafx.css.StyleManager
 import com.typesafe.config.ConfigFactory

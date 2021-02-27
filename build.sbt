@@ -6,9 +6,9 @@ organization := "com.sfxcode.sapphire"
 
 resolvers += "sfxcode-bintray" at "https://dl.bintray.com/sfxcode/maven"
 
-scalaVersion := "2.13.3"
+scalaVersion := "2.13.5"
 
-val JavaFXVersion = "14.0.2.1"
+val JavaFXVersion = "16-ea+7"
 
 val osName = System.getProperty("os.name") match {
   case n if n.startsWith("Linux")   => "linux"
@@ -21,15 +21,13 @@ libraryDependencies ++= Seq("base", "controls", "fxml", "graphics", "media", "sw
   "org.openjfx" % s"javafx-$m" % JavaFXVersion classifier osName
 )
 
-libraryDependencies += "org.specs2" %% "specs2-core" % "4.10.3" % Test
+libraryDependencies += "org.specs2" %% "specs2-core" % "4.10.6" % Test
 
 // Sapphire
 
-libraryDependencies += "com.sfxcode.sapphire" %% "sapphire-core" % "2.0.0"
+libraryDependencies += "com.sfxcode.sapphire" %% "sapphire-javafx" % "1.0.1"
 
-libraryDependencies += "com.sfxcode.sapphire" %% "sapphire-extension" % "1.1.0"
-
-libraryDependencies += "org.scalafx" %% "scalafx" % "12.0.2-R18"
+libraryDependencies += "org.scalafx" %% "scalafx" % "15.0.1-R21"
 
 // UI Kits
 
@@ -39,7 +37,7 @@ libraryDependencies += "eu.hansolo" % "Medusa" % "11.5"
 
 //
 
-libraryDependencies += "org.json4s" %% "json4s-native" % "3.6.9"
+libraryDependencies += "org.json4s" %% "json4s-native" % "3.6.10"
 
 libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.2.3"
 

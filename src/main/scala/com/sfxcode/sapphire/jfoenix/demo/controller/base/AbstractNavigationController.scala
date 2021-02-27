@@ -1,6 +1,6 @@
 package com.sfxcode.sapphire.jfoenix.demo.controller.base
 
-import com.sfxcode.sapphire.core.scene.ContentManager
+import com.sfxcode.sapphire.javafx.scene.ContentManager
 import javafx.fxml.FXML
 import javafx.scene.layout.StackPane
 import scalafx.Includes._
@@ -16,9 +16,8 @@ abstract class AbstractNavigationController extends AbstractViewController with 
 
   override def toolbarButtonStyleClass: String = "navigation-menu"
 
-  override def didGainVisibilityFirstTime(): Unit = {
+  override def didGainVisibilityFirstTime(): Unit =
     navigationContentManager = ContentManager(navigationContentPane, this)
-  }
 
   override def didGainVisibility(): Unit = {
     super.didGainVisibility()
