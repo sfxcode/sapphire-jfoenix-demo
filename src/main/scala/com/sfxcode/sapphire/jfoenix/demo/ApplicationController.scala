@@ -1,5 +1,6 @@
 package com.sfxcode.sapphire.jfoenix.demo
 
+import com.jfoenix.assets.JFoenixResources
 import com.sfxcode.sapphire.javafx.application.ApplicationEnvironment
 import com.sfxcode.sapphire.javafx.controller.BaseApplicationController
 import com.sfxcode.sapphire.jfoenix.demo.controller.MainViewController
@@ -15,14 +16,25 @@ class ApplicationController extends BaseApplicationController {
 
   def applicationDidLaunch() {
     logger.info("start " + this)
-    ApplicationEnvironment.loadResourceBundle("bundles/application")
-    replaceSceneContent(mainViewController)
+    replacePrimarySceneContent()
   }
 
   def replacePrimarySceneContent(): Unit = {
+    ApplicationEnvironment.clearResourceBundleCache()
+    ApplicationEnvironment.loadResourceBundle("bundles/application")
+
     StyleManager.getInstance().stylesheetContainerMap.clear()
-    val newmainViewController = getController[MainViewController]()
-    replaceSceneContent(newmainViewController)
+    replaceSceneContent(mainViewController)
+
+    val stylesheets = mainViewController.scene.getStylesheets
+    stylesheets.clear()
+    val jfoenixFontsCSS: String  = JFoenixResources.load("css/jfoenix-fonts.css").toExternalForm
+    val jfoenixDesignCSS: String = JFoenixResources.load("css/jfoenix-design.css").toExternalForm
+    val jfoenixMainCSS: String   = getClass.getResource("/css/jfoenix-main.css").toExternalForm
+    val mainCSS: String          = getClass.getResource("/css/main.css").toExternalForm
+    stylesheets.addAll(jfoenixFontsCSS, jfoenixDesignCSS, jfoenixMainCSS, mainCSS)
+
+    logger.error("" + StyleManager.getInstance().stylesheetContainerMap)
   }
 
   def applicationName: ApplicationName =

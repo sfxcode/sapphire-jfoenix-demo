@@ -28,8 +28,4 @@
             </graphic>
         </JFXButton>
     </JFXListView>
-    <stylesheets>
-        <URL value="@../css/jfoenix.css"/>
-        <URL value="@../css/main.css"/>
-    </stylesheets>
 </StackPane>

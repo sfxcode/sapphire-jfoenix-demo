@@ -8,8 +8,4 @@
            fx:controller="com.sfxcode.sapphire.jfoenix.demo.controller.view.tab.SecondTabController">
     <Label styleClass="warn-label" fx:id="infoLabel" text="%secondTab.infoText"/>
 
-    <stylesheets>
-        <URL value="@../css/jfoenix.css"/>
-        <URL value="@../css/main.css"/>
-    </stylesheets>
 </StackPane>

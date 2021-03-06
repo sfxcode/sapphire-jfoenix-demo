@@ -1,7 +1,33 @@
+/*
+ *	Apply google Roboto font to all UI components
+ */
+
+.root {
+    -fx-font-family: "Roboto";
+    -fx-font-smoothing-type: gray;
+}
+
+.side-menu {
+    -fx-padding: 20.0, 10.0;
+    -fx-font-size: 15.0;
+    -fx-font-weight: NORMAL;
+    -fx-text-fill: #444;
+}
+
+.title-label {
+    -fx-font-size: 16.0px;
+    -fx-padding: 14.0px;
+    -fx-text-fill: rgba(0.0, 0.0, 0.0, 0.87);
+}
+
 .application-label {
     -fx-font-size: 48.0px;
     -fx-padding: 32.0px;
     -fx-text-fill: #798fd1;
+}
+
+.test {
+    -fx-background-color: darkblue;
 }
 
 .info-label {
