@@ -36,6 +36,17 @@ libraryDependencies += "com.jfoenix" % "jfoenix" % "9.0.10"
 
 libraryDependencies += "eu.hansolo" % "Medusa" % "11.5"
 
+// Persistance (MongoDB) / DAO
+
+libraryDependencies += "com.sfxcode.nosql" %% "simple-mongo" % "2.2.0"
+
+// local java mongodb server - can be used in memory or file based - optional if a real mongodb database is available
+val MongoJavaServerVersion = "1.37.0"
+
+libraryDependencies += "de.bwaldvogel" % "mongo-java-server" % MongoJavaServerVersion
+
+libraryDependencies += "de.bwaldvogel" % "mongo-java-server-h2-backend" % MongoJavaServerVersion
+
 // logging
 
 libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.2.3"

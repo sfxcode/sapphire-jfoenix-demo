@@ -9,7 +9,7 @@ class StatusBarController extends AbstractViewController {
   @FXML var statusBar: StatusBar = _
 
   override def didGainVisibilityFirstTime() {
-    statusBar.setText("Sapphire - JFoenix - Scalafx - JavaFX - Application loaded ...")
+    statusBar.setText("Sapphire - JFoenix - Scalafx - JavaFX - MongoDB - Application loaded ...")
   }
 
   def updateStatusBarText(newValue: String) =
