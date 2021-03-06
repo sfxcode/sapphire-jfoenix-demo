@@ -8,7 +8,7 @@
 <StackPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
            fx:controller="com.sfxcode.sapphire.jfoenix.demo.controller.RightToolbarPopupController">
     <JFXListView fx:id="toolbarPopupList" styleClass="option-list-view">
-        <JFXButton onAction="#actionRefresh">
+        <JFXButton onAction="#actionReload">
             Reload
             <graphic>
                 <StackPane styleClass="custom-jfx-list-view-icon-container">
@@ -28,4 +28,8 @@
             </graphic>
         </JFXButton>
     </JFXListView>
+    <stylesheets>
+        <URL value="@../css/jfoenix-main.css" />
+        <URL value="@../css/main.css" />
+    </stylesheets>
 </StackPane>

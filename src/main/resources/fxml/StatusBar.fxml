@@ -8,4 +8,8 @@
            fx:controller="com.sfxcode.sapphire.jfoenix.demo.controller.StatusBarController">
 
     <StatusBar fx:id="statusBar"/>
+    <stylesheets>
+        <URL value="@../css/jfoenix-main.css" />
+        <URL value="@../css/main.css" />
+    </stylesheets>
 </StackPane>

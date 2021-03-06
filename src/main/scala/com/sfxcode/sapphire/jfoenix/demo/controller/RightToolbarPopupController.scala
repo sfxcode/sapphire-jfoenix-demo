@@ -9,14 +9,10 @@ class RightToolbarPopupController extends AbstractViewController {
 
   @FXML var toolbarPopupList: JFXListView[_] = _
 
-  def actionRefresh(event: ActionEvent): Unit = {
-    applicationController.replacePrimarySceneContent()
-  }
+  def actionReload(event: ActionEvent): Unit =
+    applicationController.actionReload(event)
 
-  def actionExit(event: ActionEvent): Unit = {
+  def actionExit(event: ActionEvent): Unit =
     applicationController.exit()
-  }
 
-
-
-  }
+}

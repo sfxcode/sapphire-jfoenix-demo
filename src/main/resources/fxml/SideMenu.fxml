@@ -20,4 +20,8 @@
 		<Label>Menu 4</Label>
 
 	</JFXListView>
+	<stylesheets>
+		<URL value="@../css/jfoenix-main.css" />
+		<URL value="@../css/main.css" />
+	</stylesheets>
 </StackPane>

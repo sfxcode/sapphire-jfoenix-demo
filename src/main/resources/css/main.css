@@ -23,7 +23,7 @@
 .application-label {
     -fx-font-size: 48.0px;
     -fx-padding: 32.0px;
-    -fx-text-fill: #798fd1;
+    -fx-text-fill: -red-400;
 }
 
 .test {

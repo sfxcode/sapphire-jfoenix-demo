@@ -28,5 +28,9 @@
     <bottom>
 
     </bottom>
+    <stylesheets>
+        <URL value="@../css/jfoenix-main.css" />
+        <URL value="@../css/main.css" />
+    </stylesheets>
 </BorderPane>
 

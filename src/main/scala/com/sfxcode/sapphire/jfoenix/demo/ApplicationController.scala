@@ -1,44 +1,52 @@
 package com.sfxcode.sapphire.jfoenix.demo
 
 import com.jfoenix.assets.JFoenixResources
+import com.sfxcode.sapphire.javafx.ConfigValues
 import com.sfxcode.sapphire.javafx.application.ApplicationEnvironment
 import com.sfxcode.sapphire.javafx.controller.BaseApplicationController
 import com.sfxcode.sapphire.jfoenix.demo.controller.MainViewController
 import com.sun.javafx.css.StyleManager
-import com.typesafe.config.ConfigFactory
+import javafx.event.ActionEvent
 
-class ApplicationController extends BaseApplicationController {
-  val conf = ConfigFactory.load()
+class ApplicationController extends BaseApplicationController with ConfigValues {
 
   var lastNavigationControllerName = ""
 
-  lazy val mainViewController = getController[MainViewController]()
+  var mainViewController: MainViewController = _
 
   def applicationDidLaunch() {
-    logger.info("start " + this)
-    replacePrimarySceneContent()
+    logger.info("init " + this)
+    reload()
   }
 
-  def replacePrimarySceneContent(): Unit = {
+  def actionReload(event: ActionEvent): Unit = {
+    logger.info("reload event called by %s".format(event.getSource))
+    reload()
+  }
+
+  private def reload(): Unit = {
+    // reset bundles
     ApplicationEnvironment.clearResourceBundleCache()
     ApplicationEnvironment.loadResourceBundle("bundles/application")
 
+    // replace scene content with new MainViewController instance
     StyleManager.getInstance().stylesheetContainerMap.clear()
+    mainViewController = getController[MainViewController]()
     replaceSceneContent(mainViewController)
 
+    // relod jfoenix helper css
     val stylesheets = mainViewController.scene.getStylesheets
     stylesheets.clear()
     val jfoenixFontsCSS: String  = JFoenixResources.load("css/jfoenix-fonts.css").toExternalForm
     val jfoenixDesignCSS: String = JFoenixResources.load("css/jfoenix-design.css").toExternalForm
-    val jfoenixMainCSS: String   = getClass.getResource("/css/jfoenix-main.css").toExternalForm
-    val mainCSS: String          = getClass.getResource("/css/main.css").toExternalForm
-    stylesheets.addAll(jfoenixFontsCSS, jfoenixDesignCSS, jfoenixMainCSS, mainCSS)
+    stylesheets.addAll(jfoenixFontsCSS, jfoenixDesignCSS)
 
-    logger.error("" + StyleManager.getInstance().stylesheetContainerMap)
+    logger.info("reload finished")
+
   }
 
   def applicationName: ApplicationName =
-    ApplicationName(conf.getString("application.name"))
+    ApplicationName(configStringValue("application.name"))
 }
 
 case class ApplicationName(name: String)

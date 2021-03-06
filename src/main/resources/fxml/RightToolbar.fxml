@@ -14,4 +14,8 @@
             </JFXHamburger>
         </StackPane>
     </JFXRippler>
+    <stylesheets>
+        <URL value="@../css/jfoenix-main.css" />
+        <URL value="@../css/main.css" />
+    </stylesheets>
 </StackPane>
