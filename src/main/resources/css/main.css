@@ -1,64 +1,54 @@
 /*
  *	Apply google Roboto font to all UI components
  */
-
 .root {
-    -fx-font-family: "Roboto";
-    -fx-font-smoothing-type: gray;
-}
+  -fx-font-family: "Roboto";
+  -fx-font-smoothing-type: gray; }
 
 .side-menu {
-    -fx-padding: 20.0, 10.0;
-    -fx-font-size: 15.0;
-    -fx-font-weight: NORMAL;
-    -fx-text-fill: #444;
-}
+  -fx-padding: 20.0, 10.0;
+  -fx-font-size: 15.0;
+  -fx-font-weight: NORMAL;
+  -fx-text-fill: #444; }
 
 .title-label {
-    -fx-font-size: 16.0px;
-    -fx-padding: 14.0px;
-    -fx-text-fill: rgba(0.0, 0.0, 0.0, 0.87);
-}
+  -fx-font-size: 16.0px;
+  -fx-padding: 14.0px;
+  -fx-text-fill: rgba(0, 0, 0, 0.87); }
 
 .application-label {
-    -fx-font-size: 48.0px;
-    -fx-padding: 32.0px;
-    -fx-text-fill: -red-400;
-}
+  -fx-font-size: 48.0px;
+  -fx-padding: 32.0px;
+  -fx-text-fill: -red-400; }
 
 .test {
-    -fx-background-color: darkblue;
-}
+  -fx-background-color: darkblue; }
 
 .info-label {
-    -fx-font-size: 32.0px;
-    -fx-padding: 14.0px;
-    -fx-background-color: #03a9f4;
-}
+  -fx-font-size: 32.0px;
+  -fx-padding: 14.0px;
+  -fx-background-color: #03a9f4; }
 
 .warn-label {
-    -fx-font-size: 32.0px;
-    -fx-padding: 14.0px;
-    -fx-background-color: #03a9f4;
-    -fx-text-fill: #D34336;
-}
+  -fx-font-size: 32.0px;
+  -fx-padding: 14.0px;
+  -fx-background-color: #03a9f4;
+  -fx-text-fill: #D34336; }
 
 .main-menu-button {
-    -fx-font-size:16px;
-    -fx-text-fill:#FFFFFF;
-}
+  -fx-font-size: 16px;
+  -fx-text-fill: #FFFFFF; }
 
 .main-menu-button-highlighted {
-    -fx-font-size:16px;
-    -fx-text-fill:#00AECB;
-}
+  -fx-font-size: 16px;
+  -fx-text-fill: #00AECB; }
 
 .navigation-menu {
-    -fx-font-size:14px;
-    -fx-text-fill:#FFFFFF;
-}
+  -fx-font-size: 14px;
+  -fx-text-fill: #FFFFFF; }
 
 .navigation-menu-highlighted {
-    -fx-font-size:14px;
-    -fx-text-fill:#00AECB;
-}
+  -fx-font-size: 14px;
+  -fx-text-fill: #00AECB; }
+
+/*# sourceMappingURL=main.css.map */
