@@ -2,8 +2,9 @@ package com.sfxcode.sapphire.jfoenix.demo.controller.base
 
 import com.sfxcode.sapphire.javafx.application.ApplicationEnvironment
 import com.sfxcode.sapphire.javafx.controller.ViewController
+import com.sfxcode.sapphire.javafx.scene.ContentManager
 import com.sfxcode.sapphire.jfoenix.demo.ApplicationController
-import com.sfxcode.sapphire.jfoenix.demo.controller.MainViewController
+import com.sfxcode.sapphire.jfoenix.demo.controller.{MainViewController, StatusBarController}
 import com.typesafe.scalalogging.LazyLogging
 
 abstract class AbstractViewController extends ViewController with LazyLogging {
@@ -12,8 +13,8 @@ abstract class AbstractViewController extends ViewController with LazyLogging {
 
   def mainViewController: MainViewController = applicationController.mainViewController
 
-  def statusBarController = mainViewController.statusBarController
+  def statusBarController: StatusBarController = mainViewController.statusBarController
 
-  def workspaceManager = mainViewController.workspaceManager
+  def workspaceManager: ContentManager = mainViewController.workspaceManager
 
 }

@@ -34,7 +34,6 @@ trait ToolbarStyling {
   def toolbarButtonClicked(event: ActionEvent, viewController: ViewController): Unit = {
     mainContentManager.updatePaneContent(viewController)
     updateToolbarButtonStyles(event.getSource.asInstanceOf[Button])
-
   }
 
 }
