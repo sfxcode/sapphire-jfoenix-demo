@@ -7,7 +7,7 @@ import com.sfxcode.sapphire.javafx.application.BaseApplication
 import com.sfxcode.sapphire.javafx.controller.BaseApplicationController
 import com.sfxcode.sapphire.javafx.{BuildInfo, ConfigValues}
 import com.sfxcode.sapphire.jfoenix.demo.database.Database.PersonDAO
-import com.sfxcode.sapphire.jfoenix.demo.database.PersonServices
+import com.sfxcode.sapphire.jfoenix.demo.sevices.PersonServices
 import org.mongodb.scala.BulkWriteResult
 
 object Application extends BaseApplication with ConfigValues {

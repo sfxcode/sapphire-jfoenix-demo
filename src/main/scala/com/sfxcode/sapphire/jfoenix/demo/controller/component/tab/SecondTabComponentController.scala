@@ -1,8 +1,8 @@
-package com.sfxcode.sapphire.jfoenix.demo.controller.view.tab
+package com.sfxcode.sapphire.jfoenix.demo.controller.component.tab
 
 import com.sfxcode.sapphire.jfoenix.demo.controller.base.AbstractViewController
 
-class SecondTabController extends AbstractViewController {
+class SecondTabComponentController extends AbstractViewController {
 
   override def didGainVisibilityFirstTime(): Unit = {
 
@@ -10,6 +10,4 @@ class SecondTabController extends AbstractViewController {
 
   }
 
-
 }
-

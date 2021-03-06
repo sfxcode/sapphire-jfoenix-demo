@@ -6,7 +6,7 @@
 
 <?import java.net.URL?>
 <BorderPane xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.sfxcode.sapphire.jfoenix.demo.controller.view.ViewNavigationController">
+            fx:controller="com.sfxcode.sapphire.jfoenix.demo.controller.page.TabPageController">
     <center>
         <StackPane fx:id="navigationContentPane"/>
     </center>
@@ -29,8 +29,8 @@
 
     </bottom>
     <stylesheets>
-        <URL value="@../css/jfoenix-main.css" />
-        <URL value="@../css/main.css" />
+        <URL value="@../../css/jfoenix-main.css" />
+        <URL value="@../../css/main.css" />
     </stylesheets>
 </BorderPane>
 

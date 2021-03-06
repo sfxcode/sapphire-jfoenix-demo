@@ -20,7 +20,7 @@
 
 <StackPane fx:id="root" minHeight="800" minWidth="1000" xmlns="http://javafx.com/javafx/11.0.1"
            xmlns:fx="http://javafx.com/fxml/1"
-           fx:controller="com.sfxcode.sapphire.jfoenix.demo.controller.MainViewController">
+           fx:controller="com.sfxcode.sapphire.jfoenix.demo.controller.app.MainController">
     <MenuBar fx:id="menuBar" VBox.vgrow="NEVER">
         <menus>
             <Menu mnemonicParsing="false" text="File">
@@ -55,7 +55,7 @@
             </Menu>
             <Menu mnemonicParsing="false" text="Help">
                 <items>
-                    <MenuItem mnemonicParsing="false" text="About MyHelloApp"/>
+                    <MenuItem mnemonicParsing="false" text="About My App"/>
                 </items>
             </Menu>
         </menus>
@@ -74,8 +74,9 @@
                                 </JFXHamburger>
                             </StackPane>
                         </JFXRippler>
-                        <JFXButton text="View" styleClass="main-menu-button"/>
-                        <JFXButton text="Editor" styleClass="main-menu-button"/>
+                        <JFXButton text="Home" styleClass="main-menu-button" onAction="#actionLoadHomeController"/>
+                        <JFXButton text="MasterDetail" styleClass="main-menu-button" onAction="#actionLoadPersonMasterController"/>
+                        <JFXButton text="TabView" styleClass="main-menu-button" onAction="#actionLoadViewController"/>
                     </leftItems>
                     <rightItems>
                         <StackPane fx:id="rightToolbarPane">
@@ -115,8 +116,8 @@
         </bottom>
     </BorderPane>
     <stylesheets>
-        <URL value="@../css/jfoenix-main.css" />
-        <URL value="@../css/main.css" />
+        <URL value="@../../css/jfoenix-main.css" />
+        <URL value="@../../css/main.css" />
     </stylesheets>
 
 </StackPane>

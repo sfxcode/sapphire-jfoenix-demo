@@ -1,4 +1,4 @@
-package com.sfxcode.sapphire.jfoenix.demo.controller
+package com.sfxcode.sapphire.jfoenix.demo.controller.app
 
 import com.sfxcode.sapphire.jfoenix.demo.controller.base.AbstractViewController
 import javafx.fxml.FXML

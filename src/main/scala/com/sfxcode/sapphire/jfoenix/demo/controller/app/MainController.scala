@@ -1,19 +1,20 @@
-package com.sfxcode.sapphire.jfoenix.demo.controller
+package com.sfxcode.sapphire.jfoenix.demo.controller.app
 
 import com.jfoenix.controls.events.JFXDrawerEvent
 import com.jfoenix.controls.{JFXDrawer, JFXHamburger}
 import com.sfxcode.sapphire.javafx.controller.ViewController
 import com.sfxcode.sapphire.javafx.scene.ContentManager
-import com.sfxcode.sapphire.jfoenix.demo.controller.view.ViewNavigationController
+import com.sfxcode.sapphire.jfoenix.demo.controller.page.person.{PersonDetailPageController, PersonMasterPageController}
+import com.sfxcode.sapphire.jfoenix.demo.controller.page.{HomePageController, TabPageController}
 import com.typesafe.scalalogging.LazyLogging
+import javafx.event.ActionEvent
 import javafx.fxml.FXML
 import javafx.scene.control.MenuBar
 import javafx.scene.layout.StackPane
 import scalafx.Includes._
-import scalafx.event.ActionEvent
 import scalafx.scene.input.MouseEvent
 
-class MainViewController extends ViewController with LazyLogging {
+class MainController extends ViewController with LazyLogging {
 
   @FXML var menuBar: MenuBar = _
 
@@ -29,7 +30,10 @@ class MainViewController extends ViewController with LazyLogging {
 
   @FXML var drawer: JFXDrawer = _
 
-  lazy val viewNavigationController: ViewNavigationController = getController[ViewNavigationController]()
+  lazy val homeController: HomePageController                 = getController[HomePageController]()
+  lazy val personMasterController: PersonMasterPageController = getController[PersonMasterPageController]()
+  lazy val personDetailController: PersonDetailPageController = getController[PersonDetailPageController]()
+  lazy val viewNavigationController: TabPageController        = getController[TabPageController]()
 
   lazy val sideMenuController: SideMenuController         = getController[SideMenuController]()
   lazy val statusBarController: StatusBarController       = getController[StatusBarController]()
@@ -43,7 +47,7 @@ class MainViewController extends ViewController with LazyLogging {
   override def didGainVisibilityFirstTime() {
     menuBar.setUseSystemMenuBar(true)
 
-    workspaceManager = ContentManager(workspacePane, this, viewNavigationController)
+    workspaceManager = ContentManager(workspacePane, this, homeController)
 
     sideMenuManager = ContentManager(sideContentPane, this, sideMenuController)
 
@@ -78,4 +82,15 @@ class MainViewController extends ViewController with LazyLogging {
 
   }
 
+  def actionLoadHomeController(event: ActionEvent): Unit =
+    updatePage(homeController)
+
+  def actionLoadViewController(event: ActionEvent): Unit =
+    updatePage(viewNavigationController)
+
+  def actionLoadPersonMasterController(event: ActionEvent): Unit =
+    updatePage(personMasterController)
+
+  def updatePage(pageController: ViewController): Unit =
+    workspaceManager.updatePaneContent(pageController)
 }

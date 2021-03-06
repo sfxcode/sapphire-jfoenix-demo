@@ -1,4 +1,4 @@
-package com.sfxcode.sapphire.jfoenix.demo.controller
+package com.sfxcode.sapphire.jfoenix.demo.controller.app
 
 import com.jfoenix.controls.JFXPopup.{PopupHPosition, PopupVPosition}
 import com.jfoenix.controls._
@@ -8,8 +8,7 @@ import javafx.scene.layout.StackPane
 import scalafx.Includes._
 import scalafx.scene.input.MouseEvent
 
-/**
-  * Created by tom on 20.10.15.
+/** Created by tom on 20.10.15.
   */
 class RightToolbarController extends AbstractViewController {
 

@@ -1,11 +1,11 @@
-package com.sfxcode.sapphire.jfoenix.demo.database
+package com.sfxcode.sapphire.jfoenix.demo.sevices
 
 import better.files.{File, Resource}
-import com.sfxcode.nosql.mongo._
 import com.sfxcode.sapphire.jfoenix.demo.database.Database.PersonDAO
 import com.sfxcode.sapphire.jfoenix.demo.model.Person
 import com.typesafe.scalalogging.LazyLogging
 import org.mongodb.scala.BulkWriteResult
+import com.sfxcode.nosql.mongo._
 
 object PersonServices extends LazyLogging {
 
@@ -31,6 +31,9 @@ object PersonServices extends LazyLogging {
 
   def personForName(name: String): Option[Person] =
     PersonDAO.find(Map("name" -> name)).resultOption()
+
+  def personAll(): List[Person] =
+    PersonDAO.find().resultList()
 
   def personCount(): Long = PersonDAO.count().result()
 }

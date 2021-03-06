@@ -6,7 +6,7 @@
 <?import org.kordamp.ikonli.javafx.FontIcon?>
 <?import java.net.URL?>
 <StackPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
-           fx:controller="com.sfxcode.sapphire.jfoenix.demo.controller.RightToolbarPopupController">
+           fx:controller="com.sfxcode.sapphire.jfoenix.demo.controller.app.RightToolbarPopupController">
     <JFXListView fx:id="toolbarPopupList" styleClass="option-list-view">
         <JFXButton onAction="#actionReload">
             Reload
@@ -29,7 +29,7 @@
         </JFXButton>
     </JFXListView>
     <stylesheets>
-        <URL value="@../css/jfoenix-main.css" />
-        <URL value="@../css/main.css" />
+        <URL value="@../../css/jfoenix-main.css" />
+        <URL value="@../../css/main.css" />
     </stylesheets>
 </StackPane>

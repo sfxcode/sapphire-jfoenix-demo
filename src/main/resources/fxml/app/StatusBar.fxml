@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+<?import org.controlsfx.control.StatusBar?>
+<StackPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="com.sfxcode.sapphire.jfoenix.demo.controller.app.StatusBarController">
+
+    <StatusBar fx:id="statusBar"/>
+    <stylesheets>
+        <URL value="@../../css/jfoenix-main.css" />
+        <URL value="@../../css/main.css" />
+    </stylesheets>
+</StackPane>

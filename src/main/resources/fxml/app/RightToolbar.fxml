@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import java.net.URL?>
 <StackPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
-           fx:controller="com.sfxcode.sapphire.jfoenix.demo.controller.RightToolbarController">
+           fx:controller="com.sfxcode.sapphire.jfoenix.demo.controller.app.RightToolbarController">
 
     <JFXRippler fx:id="optionsRippler" maskType="CIRCLE"
                 style="-fx-ripple-color:WHITE;">
@@ -15,7 +15,7 @@
         </StackPane>
     </JFXRippler>
     <stylesheets>
-        <URL value="@../css/jfoenix-main.css" />
-        <URL value="@../css/main.css" />
+        <URL value="@../../css/jfoenix-main.css" />
+        <URL value="@../../css/main.css" />
     </stylesheets>
 </StackPane>

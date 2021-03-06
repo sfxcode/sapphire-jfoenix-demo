@@ -1,12 +1,12 @@
-package com.sfxcode.sapphire.jfoenix.demo.controller
+package com.sfxcode.sapphire.jfoenix.demo.controller.app
 
+import com.jfoenix.controls.JFXListView
+import com.sfxcode.sapphire.jfoenix.demo.controller.base.AbstractViewController
+import com.sfxcode.sapphire.jfoenix.demo.sevices.PersonServices._
+import com.sfxcode.sapphire.jfoenix.demo.model.Person
 import javafx.event.ActionEvent
 import javafx.fxml.FXML
 import javafx.scene.control.Label
-import com.jfoenix.controls.JFXListView
-import com.sfxcode.sapphire.jfoenix.demo.controller.base.AbstractViewController
-import com.sfxcode.sapphire.jfoenix.demo.database.PersonServices._
-import com.sfxcode.sapphire.jfoenix.demo.model.Person
 import scalafx.Includes._
 
 /** Created by tom on 20.10.15.

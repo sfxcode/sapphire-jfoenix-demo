@@ -4,7 +4,7 @@ import com.jfoenix.assets.JFoenixResources
 import com.sfxcode.sapphire.javafx.ConfigValues
 import com.sfxcode.sapphire.javafx.application.ApplicationEnvironment
 import com.sfxcode.sapphire.javafx.controller.BaseApplicationController
-import com.sfxcode.sapphire.jfoenix.demo.controller.MainViewController
+import com.sfxcode.sapphire.jfoenix.demo.controller.app.MainController
 import com.sun.javafx.css.StyleManager
 import javafx.event.ActionEvent
 
@@ -12,7 +12,7 @@ class ApplicationController extends BaseApplicationController with ConfigValues 
 
   var lastNavigationControllerName = ""
 
-  var mainViewController: MainViewController = _
+  var mainViewController: MainController = _
 
   def applicationDidLaunch() {
     logger.info("init " + this)
@@ -30,8 +30,8 @@ class ApplicationController extends BaseApplicationController with ConfigValues 
     ApplicationEnvironment.loadResourceBundle("bundles/application")
 
     // replace scene content with new MainViewController instance
-    StyleManager.getInstance().stylesheetContainerMap.clear()
-    mainViewController = getController[MainViewController]()
+    reloadStyles()
+    mainViewController = getController[MainController]()
     replaceSceneContent(mainViewController)
 
     // relod jfoenix helper css
