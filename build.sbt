@@ -21,12 +21,13 @@ libraryDependencies ++= Seq("base", "controls", "fxml", "graphics", "media", "sw
   "org.openjfx" % s"javafx-$m" % JavaFXVersion classifier osName
 )
 
+// specs
 libraryDependencies += "org.specs2" %% "specs2-core" % "4.10.6" % Test
 
 // Sapphire
-
 libraryDependencies += "com.sfxcode.sapphire" %% "sapphire-javafx" % "1.0.1"
 
+// scalafx
 libraryDependencies += "org.scalafx" %% "scalafx" % "15.0.1-R21"
 
 // UI Kits
@@ -35,14 +36,13 @@ libraryDependencies += "com.jfoenix" % "jfoenix" % "9.0.10"
 
 libraryDependencies += "eu.hansolo" % "Medusa" % "11.5"
 
-//
-
-libraryDependencies += "org.json4s" %% "json4s-native" % "3.6.10"
+// logging
 
 libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.2.3"
 
 mainClass := Some("com.sfxcode.sapphire.jfoenix.demo.Application")
 
+// BuildInfo Configuration
 enablePlugins(BuildInfoPlugin)
 
 buildInfoPackage := "com.sfxcode.sapphire.jfoenix.demo"
