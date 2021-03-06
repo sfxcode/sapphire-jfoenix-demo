@@ -6,7 +6,7 @@ import com.sfxcode.sapphire.javafx.controller.BaseApplicationController
 
 object Application extends BaseApplication with ConfigValues {
 
-  override def title = "%s (%s)".format(configStringValue("project.name"), BuildInfo.version)
+  override def title: String = "%s (%s)".format(configStringValue("project.name"), BuildInfo.version)
 
   override def height: Int = 800
 

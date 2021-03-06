@@ -13,7 +13,7 @@ import scalafx.scene.input.MouseEvent
   */
 class RightToolbarController extends AbstractViewController {
 
-  @FXML var optionsBurger: StackPane = _
+  @FXML var optionsBurger: StackPane   = _
   @FXML var optionsRippler: JFXRippler = _
 
   var toolbarPopup: JFXPopup = _
@@ -24,11 +24,10 @@ class RightToolbarController extends AbstractViewController {
 
     toolbarPopup = new JFXPopup(rightToolbarPopupController.rootPane)
 
-    optionsBurger.onMouseClicked = (e: MouseEvent) => {
+    optionsBurger.onMouseClicked = (_: MouseEvent) => {
       toolbarPopup.show(optionsBurger, PopupVPosition.TOP, PopupHPosition.RIGHT, -12, 15)
     }
 
   }
-
 
 }

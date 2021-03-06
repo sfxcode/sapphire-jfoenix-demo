@@ -12,7 +12,9 @@ class RightToolbarPopupController extends AbstractViewController {
   def actionReload(event: ActionEvent): Unit =
     applicationController.actionReload(event)
 
-  def actionExit(event: ActionEvent): Unit =
+  def actionExit(event: ActionEvent): Unit = {
+    logger.info("actionExit event called by %s".format(event.getSource))
     applicationController.exit()
+  }
 
 }

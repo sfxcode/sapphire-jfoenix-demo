@@ -31,5 +31,5 @@ class ViewTabController extends AbstractTabController {
   }
 
   def tabPaneHasChanged(oldValue: Tab, newValue: Tab): Unit =
-    statusBarController.setText("Tab selected : " + newValue.getText)
+    statusBarController.updateStatusBarText("Tab selected : " + newValue.getText)
 }

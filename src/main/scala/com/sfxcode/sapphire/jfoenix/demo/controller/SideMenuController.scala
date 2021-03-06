@@ -16,19 +16,20 @@ class SideMenuController extends AbstractViewController {
 
   @FXML var sideList: JFXListView[Label] = _
 
-
   def actionClickButton(event: ActionEvent) {
     logger.debug(event.toString)
-    val source = event.getSource
-
   }
+
   override def didGainVisibilityFirstTime() {
-    sideList.getSelectionModel.selectedItemProperty.onChange((_, oldValue, newValue) => itemSelected(oldValue, newValue))
+    sideList.getSelectionModel.selectedItemProperty.onChange((_, oldValue, newValue) =>
+      itemSelected(oldValue, newValue)
+    )
   }
-
 
   def itemSelected(oldValue: Label, newValue: Label) {
-    statusBarController.setText(newValue.getText)
+    logger.debug("changedFrom %s to %s".format(oldValue, newValue))
+
+    statusBarController.updateStatusBarText(newValue.getText)
 
   }
 

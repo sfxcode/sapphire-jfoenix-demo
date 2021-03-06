@@ -8,7 +8,7 @@ resolvers += "sfxcode-bintray" at "https://dl.bintray.com/sfxcode/maven"
 
 scalaVersion := "2.13.5"
 
-val JavaFXVersion = "16-ea+7"
+val JavaFXVersion = "15.0.1"
 
 val osName = System.getProperty("os.name") match {
   case n if n.startsWith("Linux")   => "linux"

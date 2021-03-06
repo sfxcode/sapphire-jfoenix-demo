@@ -14,10 +14,10 @@
 		<String fx:value="side-menu" />
 	</styleClass>
 	<JFXListView  fx:id="sideList">
-		<Label>Menu 1</Label>
-		<Label>Menu 2</Label>
-		<Label>Menu 3</Label>
-		<Label>Menu 4</Label>
+		<Label>This</Label>
+		<Label>is</Label>
+		<Label>an</Label>
+		<Label>example</Label>
 
 	</JFXListView>
 	<stylesheets>

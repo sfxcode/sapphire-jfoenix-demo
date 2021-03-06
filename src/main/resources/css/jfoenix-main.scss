@@ -864,9 +864,10 @@
     -fx-shape: "M 0 -3.5 L 4 0 L 0 3.5 z";
 }
 
-.tree-table-row-cell .jfx-text-field {
-    -fx-focus-color: rgba(82, 100, 174);
-}
+
+//.tree-table-row-cell .jfx-text-field {
+//    -fx-focus-color: rgba(82, 100, 174);
+//}
 
 .tree-table-row-cell .jfx-text-field:error {
     -jfx-focus-color: #D34336;
