@@ -4,7 +4,7 @@ import com.jfoenix.controls.{JFXComboBox, JFXTextField}
 
 object JFoenixControlFactory {
 
-  def createSearchTextField(promptText: String = "", maxWidth: Double = 50): JFXTextField = {
+  def createSearchTextField(promptText: String = "", maxWidth: Double = 150): JFXTextField = {
     val result = new JFXTextField()
     result.setMaxWidth(maxWidth)
     result.setPrefWidth(maxWidth)

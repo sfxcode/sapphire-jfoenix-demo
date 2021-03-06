@@ -376,20 +376,37 @@
 *                                                                              *
 *******************************************************************************/
 
-.jfx-text-field, .jfx-password-field, .jfx-text-area {
-    -fx-background-color: transparent;
-    -fx-font-weight: BOLD;
-    -fx-prompt-text-fill: #808080;
-    -fx-alignment: top-left;
-    -fx-max-width: 300.0;
-    -fx-pref-width: 300.0;
-    -jfx-focus-color: #4059A9;
-    -jfx-unfocus-color: #4d4d4d;
-}
+
+
+//.jfx-text-field > .input-line,
+//.jfx-combo-box > .input-line {
+//    -fx-background-color: transparent;
+//    -fx-pref-height: 0px;
+//    -fx-translate-y: 0px;
+//}
+//
+//.jfx-text-field > .input-focused-line,
+//.jfx-combo-box > .input-focused-line {
+//    -fx-background-color: transparent;
+//    -fx-pref-height: 0px;
+//}
+
+//.jfx-text-field, .jfx-password-field, .jfx-text-area {
+//    -fx-background-color: transparent;
+//    -fx-font-weight: BOLD;
+//    -fx-prompt-text-fill: #808080;
+//    -fx-alignment: top-left;
+//    -fx-max-width: 300.0;
+//    -fx-pref-width: 300.0;
+//    -jfx-focus-color: #4059A9;
+//    -jfx-unfocus-color: #4d4d4d;
+//}
 
 .jfx-text-area .viewport {
     -fx-background-color: #F4F4F4;
 }
+
+
 
 /*******************************************************************************
 *                                                                              *
@@ -1063,13 +1080,6 @@
 .table-view {
     -fx-table-color: rgba(82, 100, 174, 0.4);
     -fx-table-rippler-color: rgba(82, 100, 174, 0.6);
-}
-:focused {
-    -fx-background-color: -fx-table-color, -fx-box-border, -fx-control-inner-background;
-    -fx-background-insets: -1.4, 0, 1;
-    -fx-background-radius: 1.4, 0, 0;
-    /*....*/
-    -fx-padding: 1; /* 0.083333em; */
 }
 
 .table-view:focused .table-row-cell:selected{

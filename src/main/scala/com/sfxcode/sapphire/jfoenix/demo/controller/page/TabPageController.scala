@@ -8,7 +8,8 @@ import javafx.scene.control.Button
 
 class TabPageController extends AbstractNavigationController {
 
-  @FXML var tabButton: Button = _
+  @FXML var tabButton: Button    = _
+  @FXML var secondButton: Button = _
 
   lazy val tabController = getController[TabViewComponentController]()
 

@@ -16,6 +16,7 @@
                 <JFXToolbar maxHeight="32" fx:id="toolbar">
                     <leftItems>
                         <JFXButton styleClass="navigation-menu" onAction="#actionShowTab" text="Tab Example" fx:id="tabButton"/>
+                        <JFXButton styleClass="navigation-menu" onAction="#actionShowTab" text="Tab Example" fx:id="secondButton"/>
                     </leftItems>
                     <rightItems>
 
