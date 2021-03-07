@@ -65,7 +65,7 @@
 
         <top>
             <VBox spacing="20">
-                <JFXToolbar>
+                <JFXToolbar fx:id="toolbar">
                     <leftItems>
                         <JFXRippler maskType="CIRCLE" style="-fx-ripple-color:WHITE;">
                             <StackPane fx:id="titleBurgerContainer">
@@ -74,9 +74,9 @@
                                 </JFXHamburger>
                             </StackPane>
                         </JFXRippler>
-                        <JFXButton text="Home" styleClass="main-menu-button" onAction="#actionLoadHomeController"/>
-                        <JFXButton text="MasterDetail" styleClass="main-menu-button" onAction="#actionLoadPersonMasterController"/>
-                        <JFXButton text="TabView" styleClass="main-menu-button" onAction="#actionLoadViewController"/>
+                        <JFXButton fx:id="homeButton" text="Home" onAction="#actionLoadHomeController"/>
+                        <JFXButton text="MasterDetail" onAction="#actionLoadPersonMasterController"/>
+                        <JFXButton text="TabView" onAction="#actionLoadViewController"/>
                     </leftItems>
                     <rightItems>
                         <StackPane fx:id="rightToolbarPane">

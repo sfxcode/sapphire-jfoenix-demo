@@ -26,7 +26,7 @@
   -fx-font-size: 20.0px; }
 
 .dialog-accept {
-  -fx-text-fill: #03A9F4;
+  -fx-text-fill: #80CBC4;
   -fx-font-weight: BOLD;
   -fx-padding: 0.7em 0.8em; }
 
@@ -48,29 +48,15 @@
 .jfx-snackbar-content {
   -fx-background-color: #323232; }
 
-.jfx-snackbar-toast {
-  -fx-text-fill: WHITE; }
-
-.jfx-snackbar-action {
-  -fx-text-fill: #ff4081; }
-
 /*******************************************************************************
  *                                                                             *
  * JFX Icons                                                                   *
  *                                                                             *
  ******************************************************************************/
 .icon {
-  -fx-fill: #FE774D;
+  -fx-fill: #80CBC4;
   -fx-padding: 10.0;
   -fx-cursor: hand; }
-
-.icons-rippler {
-  -jfx-rippler-fill: #FE774D;
-  -jfx-mask-type: CIRCLE; }
-
-.icons-rippler1 {
-  -jfx-rippler-fill: #4285F4;
-  -jfx-mask-type: CIRCLE; }
 
 .icons-rippler:hover {
   -fx-cursor: hand; }
@@ -86,7 +72,7 @@
   -fx-background-radius: 4px; }
 
 .animated-burgers .jfx-rippler {
-  -jfx-rippler-fill: #5264AE; }
+  -jfx-rippler-fill: #673AB7; }
 
 .icons-badge .badge-pane {
   -fx-background-color: #ff4081;
@@ -124,7 +110,7 @@
 .jfx-tool-bar {
   -fx-font-size: 20.0;
   -fx-font-weight: BOLD;
-  -fx-background-color: #5264AE;
+  -fx-background-color: #673AB7;
   -fx-pref-width: 100.0%;
   -fx-pref-height: 64.0px; }
 
@@ -150,7 +136,7 @@
   -fx-background-color: WHITE; }
 
 .option-jfx-list-view-icon {
-  -fx-fill: #5264AE;
+  -fx-fill: #673AB7;
   -fx-padding: 0.0 10.0 0.0 5.0;
   -fx-cursor: hand; }
 
@@ -164,29 +150,7 @@
   -fx-fill: transparent; }
 
 .jfx-radio-button .dot {
-  -fx-fill: #0F9D58; }
-
-.custom-jfx-radio-button {
-  -fx-font-size: 16.0px; }
-
-.custom-jfx-radio-button .radio {
-  -fx-stroke-width: 2.0px;
-  -fx-fill: transparent; }
-
-.custom-jfx-radio-button-blue {
-  -fx-text-fill: #5264AE;
-  -jfx-selected-color: #5264AE;
-  -jfx-unselected-color: #212121; }
-
-.custom-jfx-radio-button-red {
-  -fx-text-fill: #f44336;
-  -jfx-selected-color: #f44336;
-  -jfx-unselected-color: #b71c1c; }
-
-.custom-jfx-radio-button-green {
-  -fx-text-fill: #4caf50;
-  -jfx-selected-color: #4caf50;
-  -jfx-unselected-color: #1b5e20; }
+  -fx-fill: #80CBC4; }
 
 /*******************************************************************************
  *                                                                             *
@@ -203,26 +167,14 @@
 *                          							   *
 *******************************************************/
 .jfx-slider-colored {
-  -jfx-default-thumb: #5264AE;
+  -jfx-default-thumb: #673AB7;
   -jfx-default-track: #212121; }
 
 .jfx-slider-style {
   -jfx-indicator-position: right; }
 
 .jfx-slider-style > .thumb {
-  -fx-background-color: #03a9f4; }
-
-.jfx-slider-style .track {
-  -fx-background-color: #ff5252;
-  -fx-pref-height: 5px;
-  -fx-pref-width: 5px; }
-
-.jfx-slider-style .animated-thumb {
-  -fx-background-color: darkorange; }
-
-.jfx-slider-style .sliderValue {
-  -fx-stroke: WHITE;
-  -fx-font-size: 10.0; }
+  -fx-background-color: #80CBC4; }
 
 /******************************************************/
 /*******************************************************************************
@@ -231,7 +183,7 @@
 *                                                                              *
 *******************************************************************************/
 /*.jfx-rippler {
-	-fx-rippler-fill: #5264AE;
+	-fx-rippler-fill: $primaryColor;
 	-fx-mask-type: RECT;
 }*/
 .jfx-rippler:hover {
@@ -242,17 +194,6 @@
 * JFX Button                                                                   *
 *                                                                              *
 *******************************************************************************/
-.custom-jfx-button-raised .jfx-rippler {
-  -jfx-rippler-fill: YELLOW; }
-
-.custom-jfx-button-raised {
-  -fx-padding: 0.7em 0.57em;
-  -fx-font-size: 14.0px;
-  -jfx-button-type: RAISED;
-  -fx-background-color: #669966;
-  -fx-pref-width: 200.0;
-  -fx-text-fill: WHITE; }
-
 /*******************************************************************************
 *                                                                              *
 * JFX Check Box                                                                *
@@ -260,18 +201,6 @@
 *******************************************************************************/
 .jfx-check-box {
   -fx-font-weight: BOLD; }
-
-.custom-jfx-check-box {
-  -jfx-checked-color: RED;
-  -jfx-unchecked-color: BLACK; }
-
-.custom-jfx-check-box-all-colored {
-  -jfx-checked-color: #5264AE;
-  -jfx-unchecked-color: #5264AE;
-  -fx-text-fill: #5264AE; }
-
-.custom-jfx-check-box-text-colored {
-  -fx-text-fill: #990000; }
 
 /*******************************************************************************
 *                                                                              *
@@ -281,27 +210,6 @@
 .jfx-progress-bar {
   -fx-pref-width: 500.0; }
 
-.jfx-progress-bar > .track {
-  -fx-background-color: #E0E0E0; }
-
-.jfx-progress-bar > .bar {
-  -fx-background-color: #0F9D58; }
-
-.custom-jfx-progress-bar > .bar {
-  -fx-background-color: #ff8000; }
-
-.custom-jfx-progress-bar > .secondary-bar {
-  -fx-background-color: rgba(255, 135, 21, 0.18); }
-
-.custom-jfx-progress-bar-stroke > .bar {
-  -fx-background-color: #5264AE;
-  -fx-padding: 6; }
-
-/*******************************************************************************
-*                                                                              *
-* JFX Textfield                                                                *
-*                                                                              *
-*******************************************************************************/
 .jfx-text-area .viewport {
   -fx-background-color: #F4F4F4; }
 
@@ -323,7 +231,7 @@
   -fx-text-fill: black; }
 
 .jfx-list-cell .jfx-rippler {
-  -jfx-rippler-fill: #5264AE; }
+  -jfx-rippler-fill: #673AB7; }
 
 .jfx-list-cell:odd:selected > .jfx-rippler > StackPane,
 .jfx-list-cell:even:selected > .jfx-rippler > StackPane {
@@ -336,53 +244,6 @@
   -jfx-vertical-gap: 10.0;
   -jfx-expanded: false; }
 
-.custom-jfx-list-view .jfx-list-cell:odd:selected > .jfx-rippler > StackPane,
-.custom-jfx-list-view .jfx-list-cell:even:selected > .jfx-rippler > StackPane {
-  -fx-background-color: rgba(255, 0, 0, 0.2); }
-
-.custom-jfx-list-view {
-  -fx-background-insets: 0.0;
-  -jfx-cell-horizontal-margin: 0.0;
-  -jfx-cell-vertical-margin: 5.0;
-  -jfx-expanded: false;
-  -fx-max-width: 200.0px;
-  /* important to hide the list change of height */
-  -fx-background-color: TRANSPARENT; }
-
-.custom-jfx-list-view .jfx-rippler {
-  -jfx-rippler-fill: RED; }
-
-.custom-jfx-list-view1 {
-  -jfx-vertical-gap: 10.0;
-  -fx-pref-width: 150px;
-  -fx-background-color: transparent; }
-
-.custom-jfx-list-view-icon,
-.jfx-list-cell:selected .label .custom-jfx-list-view-icon {
-  /*-fx-text-fill: #5264AE;*/
-  -fx-fill: #5264AE;
-  -fx-padding: 0.0 10.0 0.0 5.0;
-  -fx-cursor: hand; }
-
-.custom-jfx-list-view-icon-container {
-  -fx-pref-width: 40px; }
-
-.custom-jfx-list-view .sublist-item {
-  -fx-border-color: #e0e0e0;
-  -fx-border-width: 1 0 1 0; }
-
-.custom-jfx-list-view .jfx-list-cell .sublist-header > .drop-icon {
-  -fx-background-color: GRAY; }
-
-.custom-jfx-list-view .jfx-list-cell:filled:hover .sublist-header > .drop-icon {
-  -fx-background-color: BLACK; }
-
-/*******************************************************************************/
-/*******************************************************************************/
-/*******************************************************************************/
-/*******************************************************************************/
-/*******************************************************************************/
-/*******************************************************************************/
 /*******************************************************************************
 *                                                                              *
 * JFX SUBLIST IMPORTANT                                                        *
@@ -415,61 +276,16 @@
 .sublist-header .sub-label {
   -fx-padding: 0 0 0 12; }
 
-/*.custom-jfx-list-view .sublist-container {
-	-fx-padding : 0 0 5 0;
-}*/
 /*******************************************************************************
 *                                                                              *
 * JFX Toggle Button                                                            *
 *                                                                              *
 *******************************************************************************/
 .jfx-toggle-button {
-  -jfx-toggle-color: #0F9D58; }
-
-.custom-jfx-toggle-button {
-  -jfx-toggle-color: #4285F4; }
-
-.custom-jfx-toggle-button-red {
-  -jfx-toggle-color: red;
-  -jfx-toggle-line-color: #ff8782; }
+  -jfx-toggle-color: #80CBC4; }
 
 .toggle-label {
   -fx-font-size: 14.0px; }
-
-.toggle-icon1 .icon {
-  -fx-fill: #4285F4; }
-
-.toggle-icon1 {
-  -fx-pref-width: 80px;
-  -fx-background-radius: 80px;
-  -fx-pref-height: 80px;
-  -jfx-toggle-color: rgba(66, 133, 244, 0.2988505661);
-  -jfx-untoggle-color: transparent; }
-
-.toggle-icon1 .jfx-rippler {
-  -jfx-rippler-fill: rgba(66, 133, 244, 0.2988505661); }
-
-.toggle-icon2,
-.toggle-icon3 {
-  -fx-pref-width: 50px;
-  -fx-background-radius: 50px;
-  -fx-pref-height: 50px; }
-
-.toggle-icon3 {
-  -jfx-toggle-color: rgba(128, 128, 255, 0.2);
-  -jfx-untoggle-color: transparent; }
-
-.toggle-icon2 .icon {
-  -fx-fill: RED; }
-
-.toggle-icon2 .jfx-rippler {
-  -jfx-rippler-fill: RED; }
-
-.toggle-icon3 .icon {
-  -fx-fill: #cccc33; }
-
-.toggle-icon3 .jfx-rippler {
-  -jfx-rippler-fill: #0F9D58; }
 
 /*******************************************************************************
 *                                                                              *
@@ -481,87 +297,6 @@
 
 .first-spinner {
   -jfx-radius: 20; }
-
-.first-spinner .arc {
-  -fx-stroke-width: 5.0; }
-
-.second-spinner {
-  -jfx-radius: 30; }
-
-.second-spinner .arc {
-  -fx-stroke-width: 5.0; }
-
-.third-spinner {
-  -jfx-radius: 40; }
-
-.third-spinner .arc {
-  -fx-stroke-width: 5.0; }
-
-.fourth-spinner {
-  -jfx-radius: 50; }
-
-.fourth-spinner .arc {
-  -fx-stroke-width: 5.0; }
-
-.fifth-spinner {
-  -jfx-radius: 60; }
-
-.fifth-spinner .arc {
-  -fx-stroke-width: 5.0; }
-
-.sixth-spinner {
-  -jfx-radius: 70; }
-
-.sixth-spinner .arc {
-  -fx-stroke-width: 5.0; }
-
-.seventh-spinner {
-  -jfx-radius: 80; }
-
-.seventh-spinner .arc {
-  -fx-stroke-width: 5.0; }
-
-.blue-spinner .arc {
-  -fx-stroke: #4285f4; }
-
-.blue-spinner .track {
-  -fx-stroke: #d0d0d0; }
-
-.red-spinner .arc {
-  -fx-stroke: #db4437; }
-
-.green-spinner .arc {
-  -fx-stroke: #0F9D58; }
-
-.yellow-spinner .arc {
-  -fx-stroke: #f4b400; }
-
-.materialDesign-purple:indeterminate .arc {
-  -fx-stroke: #ab47bc; }
-
-.materialDesign-blue .arc {
-  -fx-stroke: #2962ff; }
-
-.materialDesign-blue .percentage {
-  -fx-fill: #ab47bc; }
-
-.materialDesign-cyan .arc {
-  -fx-stroke: #00b8d4; }
-
-.materialDesign-green .arc {
-  -fx-stroke: #00c853; }
-
-.materialDesign-green .text {
-  visibility: false; }
-
-.materialDesign-yellow .arc {
-  -fx-stroke: #ffd600; }
-
-.materialDesign-orange .arc {
-  -fx-stroke: #ff6d00; }
-
-.materialDesign-red .arc {
-  -fx-stroke: #d50000; }
 
 /*******************************************************************************
 *                                                                              *
@@ -575,7 +310,7 @@
 .combo-box-popup .list-view .jfx-list-cell .custom-jfx-list-view-icon,
 .combo-box-popup .list-view .jfx-list-cell:filled:hover .custom-jfx-list-view-icon,
 .combo-box-popup .list-view .jfx-list-cell:selected .custom-jfx-list-view-icon {
-  -fx-fill: #5264AE; }
+  -fx-fill: #673AB7; }
 
 .combo-box-popup .list-view .jfx-list-cell:odd:selected > .jfx-rippler > StackPane,
 .combo-box-popup .list-view .jfx-list-cell:even:selected > .jfx-rippler > StackPane {
@@ -589,7 +324,7 @@
   -fx-background-color: WHITE; }
 
 .combo-box-popup .list-view .jfx-list-cell .jfx-rippler {
-  -jfx-rippler-fill: #5264AE; }
+  -jfx-rippler-fill: #673AB7; }
 
 /*******************************************************************************
 *                                                                              *
@@ -597,7 +332,7 @@
 *                                                                              *
 *******************************************************************************/
 .jfx-decorator {
-  -fx-decorator-color: derive(#5264AE, -20%); }
+  -fx-decorator-color: derive(#673AB7, -20%); }
 
 .jfx-decorator .jfx-decorator-buttons-container {
   -fx-background-color: -fx-decorator-color; }
@@ -774,12 +509,6 @@
   -fx-fill: #D34336;
   -fx-font-size: 1.0em; }
 
-.jfx-scroll-pane .main-header {
-  -fx-background-image: url("../bg1.jpg"); }
-
-.jfx-scroll-pane .condensed-header {
-  -fx-background-image: url("../bg4.jpg"); }
-
 /*******************************************************************************
 *                                                                              *
 * Pickers                                                                      *
@@ -792,6 +521,11 @@
 .jfx-time-picker > .jfx-text-field {
   -jfx-focus-color: -jfx-default-color; }
 
+/*******************************************************************************
+*                                                                              *
+* ChipView                                                                      *
+*                                                                              *
+*******************************************************************************/
 .jfx-chip-view {
   -fx-background-color: WHITE;
   -fx-padding: 16; }

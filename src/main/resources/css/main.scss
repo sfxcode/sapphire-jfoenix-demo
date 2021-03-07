@@ -1,7 +1,7 @@
 /*
  *	Apply google Roboto font to all UI components
  */
-
+@import 'colors';
 
 .root {
     -fx-font-family: "Roboto";
@@ -17,13 +17,13 @@
 
 
 .jfx-tab-pane .headers-region {
-    -fx-background-color: #5264AE;
+    -fx-background-color: $primaryColor;
 }
 .jfx-tab-pane .tab-header-background {
-    -fx-background-color: #5264AE;
+    -fx-background-color: $primaryColor;
 }
 .jfx-tab-pane .tab-selected-line {
-    -fx-stroke: #ae9c52;
+    -fx-stroke: $highlightNavigationColor;
     -fx-stroke-width: 3pt;
 }
 
@@ -43,14 +43,7 @@
 .info-label {
     -fx-font-size: 32.0px;
     -fx-padding: 14.0px;
-    -fx-background-color: #5292ae;
-}
-
-.warn-label {
-    -fx-font-size: 32.0px;
-    -fx-padding: 14.0px;
-    -fx-background-color: #ae9c52;
-    -fx-text-fill: white;
+    -fx-background-color: $secondaryColor;
 }
 
 .info-label {
@@ -59,26 +52,34 @@
     -fx-background-color: white;
 }
 
-.error-label {
+.warn-label {
     -fx-font-size: 32.0px;
     -fx-padding: 14.0px;
-    -fx-background-color: #F44336;
+    -fx-background-color:  $secondaryColor;
     -fx-text-fill: white;
 }
 
-.main-menu-button {
+
+.error-label {
+    -fx-font-size: 32.0px;
+    -fx-padding: 14.0px;
+    -fx-background-color: $errorColor;
+    -fx-text-fill: white;
+}
+
+.main-menu {
     -fx-font-size:16px;
     -fx-text-fill:#FFFFFF;
 }
 
-.main-menu-button-highlighted {
+.main-menu-highlighted {
     -fx-font-size:16px;
-    -fx-text-fill:#5292ae;
+    -fx-text-fill:$secondaryColor;
 }
 
 .navigation-menu {
     -fx-font-size:14px;
-    -fx-text-fill: #c1bebe;
+    -fx-text-fill: #E0E0E0;
 }
 
 .navigation-menu-highlighted {
@@ -98,7 +99,7 @@
 .detailActionBox .jfx-button {
     -fx-font-size:14px;
     -fx-text-fill: white;
-    -fx-background-color: #5292ae;
+    -fx-background-color: $secondaryColor;
 
 }
 
@@ -106,7 +107,7 @@
     .jfx-tool-bar {
         -fx-font-size: 20.0;
         -fx-font-weight: BOLD;
-        -fx-background-color: #5292ae;
+        -fx-background-color: $secondaryColor;
         -fx-pref-width: 100.0%;
         -fx-pref-height: 48.0px;
     }

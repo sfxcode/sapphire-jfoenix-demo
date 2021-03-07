@@ -4,21 +4,24 @@ import com.jfoenix.controls.events.JFXDrawerEvent
 import com.jfoenix.controls.{JFXDrawer, JFXHamburger}
 import com.sfxcode.sapphire.javafx.controller.ViewController
 import com.sfxcode.sapphire.javafx.scene.ContentManager
+import com.sfxcode.sapphire.jfoenix.demo.controller.base.ToolbarStyling
 import com.sfxcode.sapphire.jfoenix.demo.controller.page.person.{PersonDetailPageController, PersonMasterPageController}
 import com.sfxcode.sapphire.jfoenix.demo.controller.page.{HomePageController, TabPageController}
 import com.typesafe.scalalogging.LazyLogging
 import javafx.event.ActionEvent
 import javafx.fxml.FXML
-import javafx.scene.control.MenuBar
+import javafx.scene.control.{Button, MenuBar}
 import javafx.scene.layout.StackPane
 import scalafx.Includes._
 import scalafx.scene.input.MouseEvent
 
-class MainController extends ViewController with LazyLogging {
+class MainController extends ViewController with ToolbarStyling with LazyLogging {
 
   @FXML var menuBar: MenuBar = _
 
   @FXML var root: StackPane = _
+
+  @FXML var homeButton: Button = _
 
   @FXML var sideContentPane: StackPane  = _
   @FXML var workspacePane: StackPane    = _
@@ -44,8 +47,13 @@ class MainController extends ViewController with LazyLogging {
 
   private var counter: Int = 0
 
+  override def toolbarButtonStyleClass: String = "main-menu"
+
+  override def mainContentManager: ContentManager = workspaceManager
+
   override def didGainVisibilityFirstTime() {
     menuBar.setUseSystemMenuBar(true)
+    updateToolbarButtonStyles(homeButton)
 
     workspaceManager = ContentManager(workspacePane, this, homeController)
 
@@ -83,13 +91,16 @@ class MainController extends ViewController with LazyLogging {
   }
 
   def actionLoadHomeController(event: ActionEvent): Unit =
-    updatePage(homeController)
+    updatePage(homeController, event)
 
   def actionLoadViewController(event: ActionEvent): Unit =
-    updatePage(viewNavigationController)
+    updatePage(viewNavigationController, event)
 
   def actionLoadPersonMasterController(event: ActionEvent): Unit =
-    updatePage(personMasterController)
+    updatePage(personMasterController, event)
+
+  def updatePage(pageController: ViewController, event: ActionEvent): Unit =
+    toolbarButtonClicked(event, pageController)
 
   def updatePage(pageController: ViewController): Unit =
     workspaceManager.updatePaneContent(pageController)
