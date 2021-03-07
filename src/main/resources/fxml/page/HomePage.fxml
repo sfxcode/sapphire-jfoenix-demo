@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.VBox?>
 
 <StackPane xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sfxcode.sapphire.jfoenix.demo.controller.page.HomePageController">
-   <VBox spacing="10.0">
+   <VBox spacing="25.0">
       <children>
          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
             <children>
@@ -34,6 +34,14 @@
                 <Label styleClass="info-label" text="Info" />
                <Label styleClass="warn-label" text="Warn" />
                <Label styleClass="error-label" text="Error" />
+            </children>
+         </HBox>
+         <HBox spacing="20.0">
+            <children>
+               <Label styleClass="homepage-label" text="Database" />
+               <Label fx:id="databaseLabel" styleClass="database-label" text="Some Text" />
+               <Label fx:id="databaseLogLabel" styleClass="database-info-label" text="Some Text" />
+               <Label fx:id="databasePersonLabel" styleClass="database-info-label" text="Some Text" />
             </children>
          </HBox>
       </children>

@@ -7,7 +7,7 @@ import com.sfxcode.sapphire.javafx.application.BaseApplication
 import com.sfxcode.sapphire.javafx.controller.BaseApplicationController
 import com.sfxcode.sapphire.javafx.{BuildInfo, ConfigValues}
 import com.sfxcode.sapphire.jfoenix.demo.database.Database.PersonDAO
-import com.sfxcode.sapphire.jfoenix.demo.sevices.PersonServices
+import com.sfxcode.sapphire.jfoenix.demo.sevices.{LogService, PersonServices}
 import org.mongodb.scala.BulkWriteResult
 
 object Application extends BaseApplication with ConfigValues {
@@ -24,7 +24,11 @@ object Application extends BaseApplication with ConfigValues {
   override def applicationWillLaunch(): Unit = {
     super.applicationWillLaunch()
     localMongoDBServer = LocalServer.fromPath("local.mongo.server")
-    PersonServices.initPersonTable()
+    LogService.addLogEntry("init database", LogService.TopicDatabase)
+
+    PersonServices.initPersonCollection()
+    LogService.initLogCollection()
+    LogService.addLogEntry("applicationWillLaunch")
   }
 
   override def applicationWillTerminate(): Unit = {

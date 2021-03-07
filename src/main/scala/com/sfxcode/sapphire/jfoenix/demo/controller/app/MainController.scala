@@ -6,7 +6,12 @@ import com.sfxcode.sapphire.javafx.controller.ViewController
 import com.sfxcode.sapphire.javafx.scene.ContentManager
 import com.sfxcode.sapphire.jfoenix.demo.controller.base.ToolbarStyling
 import com.sfxcode.sapphire.jfoenix.demo.controller.page.person.{PersonDetailPageController, PersonMasterPageController}
-import com.sfxcode.sapphire.jfoenix.demo.controller.page.{HomePageController, TabPageController}
+import com.sfxcode.sapphire.jfoenix.demo.controller.page.{
+  HomePageController,
+  LogEntriesPageController,
+  TabPageController
+}
+import com.sfxcode.sapphire.jfoenix.demo.sevices.LogService
 import com.typesafe.scalalogging.LazyLogging
 import javafx.event.ActionEvent
 import javafx.fxml.FXML
@@ -37,6 +42,7 @@ class MainController extends ViewController with ToolbarStyling with LazyLogging
   lazy val personMasterController: PersonMasterPageController = getController[PersonMasterPageController]()
   lazy val personDetailController: PersonDetailPageController = getController[PersonDetailPageController]()
   lazy val viewNavigationController: TabPageController        = getController[TabPageController]()
+  lazy val logEntriesPageController: LogEntriesPageController = getController[LogEntriesPageController]()
 
   lazy val sideMenuController: SideMenuController         = getController[SideMenuController]()
   lazy val statusBarController: StatusBarController       = getController[StatusBarController]()
@@ -96,11 +102,16 @@ class MainController extends ViewController with ToolbarStyling with LazyLogging
   def actionLoadViewController(event: ActionEvent): Unit =
     updatePage(viewNavigationController, event)
 
+  def actionLoadLogsController(event: ActionEvent): Unit =
+    updatePage(logEntriesPageController, event)
+
   def actionLoadPersonMasterController(event: ActionEvent): Unit =
     updatePage(personMasterController, event)
 
-  def updatePage(pageController: ViewController, event: ActionEvent): Unit =
+  def updatePage(pageController: ViewController, event: ActionEvent): Unit = {
     toolbarButtonClicked(event, pageController)
+    LogService.addLogEntry("controller: %s was loaded".format(pageController.getClass.getSimpleName))
+  }
 
   def updatePage(pageController: ViewController): Unit =
     workspaceManager.updatePaneContent(pageController)

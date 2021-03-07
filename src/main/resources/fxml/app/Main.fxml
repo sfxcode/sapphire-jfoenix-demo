@@ -77,6 +77,7 @@
                         <JFXButton fx:id="homeButton" text="Home" onAction="#actionLoadHomeController"/>
                         <JFXButton text="MasterDetail" onAction="#actionLoadPersonMasterController"/>
                         <JFXButton text="TabView" onAction="#actionLoadViewController"/>
+                        <JFXButton text="Logs" onAction="#actionLoadLogsController"/>
                     </leftItems>
                     <rightItems>
                         <StackPane fx:id="rightToolbarPane">

@@ -1,18 +1,13 @@
 package com.sfxcode.sapphire.jfoenix.demo.controller.page.person
 
-import com.jfoenix.controls.{JFXComboBox, JFXTextField}
 import com.sfxcode.sapphire.javafx.controller.{BaseDetailController, BaseMasterController}
 import com.sfxcode.sapphire.javafx.filter.DataTableFilter
 import com.sfxcode.sapphire.javafx.value.{BeanConversions, FXBean}
 import com.sfxcode.sapphire.jfoenix.demo.control.JFoenixControlFactory.{createSearchComboBox, createSearchTextField}
 import com.sfxcode.sapphire.jfoenix.demo.controller.base.BaseController
-import com.sfxcode.sapphire.jfoenix.demo.sevices.PersonServices
 import com.sfxcode.sapphire.jfoenix.demo.model.Person
+import com.sfxcode.sapphire.jfoenix.demo.sevices.PersonServices
 import javafx.collections.ObservableList
-import javafx.scene.Node
-import javafx.scene.control.TableRow
-import javafx.scene.control.skin.TableHeaderRow
-import scalafx.scene.control.TableCell
 
 import scala.reflect._
 

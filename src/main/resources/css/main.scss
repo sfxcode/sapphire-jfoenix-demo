@@ -27,6 +27,13 @@
     -fx-stroke-width: 3pt;
 }
 
+.homepage-label {
+    -fx-font-size: 32.0px;
+    -fx-padding: 14.0px;
+    -fx-text-fill: rgba(0.0, 0.0, 0.0, 0.87);
+    -fx-pref-width: 250px;
+
+}
 
 .title-label {
     -fx-font-size: 16.0px;
@@ -35,36 +42,80 @@
 }
 
 .application-label {
-    -fx-font-size: 48.0px;
+    -fx-font-size: 4em;
     -fx-padding: 32.0px;
-    -fx-text-fill: -red-400;
+    -fx-text-fill: $primaryColor;
 }
 
-.info-label {
-    -fx-font-size: 32.0px;
+.primary-label {
+    -fx-font-size: 1.5em;
+    -fx-padding: 14.0px;
+    -fx-background-color: $primaryColor;
+    -fx-text-fill: $highlightTextColor;
+
+}
+
+.primary-light-label {
+    -fx-font-size: 1.5em;
+    -fx-padding: 14.0px;
+    -fx-background-color: $primaryLightColor;
+    -fx-text-fill: $highlightTextColor;
+
+}
+
+.primary-dark-label {
+    -fx-font-size: 1.5em;
+    -fx-padding: 14.0px;
+    -fx-background-color: $primaryDarkColor;
+    -fx-text-fill: $highlightTextColor;
+}
+
+.secondary-label {
+    -fx-font-size: 1.5em;
     -fx-padding: 14.0px;
     -fx-background-color: $secondaryColor;
 }
 
-.info-label {
-    -fx-font-size: 32.0px;
+.secondary-dark-label {
+    -fx-font-size: 1.5em;
     -fx-padding: 14.0px;
-    -fx-background-color: white;
+    -fx-background-color: $secondaryDarkColor;
+}
+
+.info-label {
+    -fx-font-size: 2em;
+    -fx-padding: 14.0px;
+    -fx-background-color: $infoColor;
 }
 
 .warn-label {
-    -fx-font-size: 32.0px;
+    -fx-font-size: 2em;
     -fx-padding: 14.0px;
-    -fx-background-color:  $secondaryColor;
+    -fx-background-color:  $warnColor;
     -fx-text-fill: white;
 }
 
 
 .error-label {
-    -fx-font-size: 32.0px;
+    -fx-font-size: 2em;
     -fx-padding: 14.0px;
     -fx-background-color: $errorColor;
     -fx-text-fill: white;
+}
+
+.database-label {
+    -fx-font-size: 1.5em;
+    -fx-padding: 14.0px;
+    -fx-background-color: $primaryColor;
+    -fx-text-fill: $highlightTextColor;
+
+}
+
+.database-info-label {
+    -fx-font-size: 1.5em;
+    -fx-padding: 14.0px;
+    -fx-background-color: $primaryLightColor;
+    -fx-text-fill: $highlightTextColor;
 }
 
 .main-menu {
@@ -96,10 +147,10 @@
     -fx-translate-y: 0px;
 }
 
-.detailActionBox .jfx-button {
+.save-pane .jfx-button {
     -fx-font-size:14px;
     -fx-text-fill: white;
-    -fx-background-color: $secondaryColor;
+    -fx-background-color: $primaryDarkColor;
 
 }
 
@@ -107,7 +158,7 @@
     .jfx-tool-bar {
         -fx-font-size: 20.0;
         -fx-font-weight: BOLD;
-        -fx-background-color: $secondaryColor;
+        -fx-background-color: $secondaryDarkColor;
         -fx-pref-width: 100.0%;
         -fx-pref-height: 48.0px;
     }

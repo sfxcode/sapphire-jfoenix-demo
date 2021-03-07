@@ -26,7 +26,7 @@
   -fx-font-size: 20.0px; }
 
 .dialog-accept {
-  -fx-text-fill: #80CBC4;
+  -fx-text-fill: #d0e1e0;
   -fx-font-weight: BOLD;
   -fx-padding: 0.7em 0.8em; }
 
@@ -54,7 +54,7 @@
  *                                                                             *
  ******************************************************************************/
 .icon {
-  -fx-fill: #80CBC4;
+  -fx-fill: #d0e1e0;
   -fx-padding: 10.0;
   -fx-cursor: hand; }
 
@@ -150,7 +150,7 @@
   -fx-fill: transparent; }
 
 .jfx-radio-button .dot {
-  -fx-fill: #80CBC4; }
+  -fx-fill: #d0e1e0; }
 
 /*******************************************************************************
  *                                                                             *
@@ -174,7 +174,7 @@
   -jfx-indicator-position: right; }
 
 .jfx-slider-style > .thumb {
-  -fx-background-color: #80CBC4; }
+  -fx-background-color: #d0e1e0; }
 
 /******************************************************/
 /*******************************************************************************
@@ -282,7 +282,7 @@
 *                                                                              *
 *******************************************************************************/
 .jfx-toggle-button {
-  -jfx-toggle-color: #80CBC4; }
+  -jfx-toggle-color: #d0e1e0; }
 
 .toggle-label {
   -fx-font-size: 14.0px; }
@@ -605,8 +605,7 @@
 
 .table-view .table-cell {
   -fx-border-width: 0 0 0 0;
-  -fx-padding: 16 0 16 0;
-  -fx-alignment: top-center; }
+  -fx-padding: 12 4 12 4; }
 
 .table-view .column-overlay {
   -fx-background-color: -fx-table-color; }
@@ -621,7 +620,7 @@
   -fx-shape: "M 0 -3.5 L 4 0 L 0 3.5 z"; }
 
 .table-row-cell .jfx-text-field {
-  -fx-focus-color: #5264ae; }
+  -fx-focus-color: #d0e1e0; }
 
 .table-row-cell .jfx-text-field:error {
   -jfx-focus-color: #D34336;

@@ -3,6 +3,7 @@ package com.sfxcode.sapphire.jfoenix.demo.controller.base
 import com.jfoenix.controls.JFXToolbar
 import com.sfxcode.sapphire.javafx.controller.ViewController
 import com.sfxcode.sapphire.javafx.scene.ContentManager
+import com.sfxcode.sapphire.jfoenix.demo.sevices.LogService
 import javafx.event.ActionEvent
 import javafx.fxml.FXML
 import javafx.scene.control.Button

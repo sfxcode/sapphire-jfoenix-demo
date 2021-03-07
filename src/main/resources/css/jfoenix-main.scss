@@ -767,8 +767,7 @@
 
 .table-view .table-cell {
     -fx-border-width: 0 0 0 0;
-    -fx-padding: 16 0 16 0;
-    -fx-alignment: top-center;
+    -fx-padding: 12 4 12 4;
 }
 
 .table-view .column-overlay {
@@ -787,7 +786,7 @@
 }
 
 .table-row-cell .jfx-text-field {
-    -fx-focus-color: rgb(82, 100, 174);
+    -fx-focus-color: $secondaryColor;
 }
 
 .table-row-cell .jfx-text-field:error {

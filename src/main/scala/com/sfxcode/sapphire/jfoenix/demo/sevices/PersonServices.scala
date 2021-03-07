@@ -6,10 +6,12 @@ import com.sfxcode.sapphire.jfoenix.demo.model.Person
 import com.typesafe.scalalogging.LazyLogging
 import org.mongodb.scala.BulkWriteResult
 import com.sfxcode.nosql.mongo._
+import com.sfxcode.sapphire.jfoenix.demo.sevices.LogService.addLogEntry
+import org.mongodb.scala.result.{DeleteResult, UpdateResult}
 
 object PersonServices extends LazyLogging {
 
-  def initPersonTable(): Unit = {
+  def initPersonCollection(): Unit = {
     // since all database function results are observables - we have to add .result() to wait for the end of current operation
     val importResult: BulkWriteResult =
       PersonDAO.importJsonFile(File(Resource.getUrl("data/person_list.json"))).result()
@@ -24,6 +26,9 @@ object PersonServices extends LazyLogging {
         PersonDAO.count().result()
       )
     )
+
+    addLogEntry("initPersonCollection", "Database")
+
   }
 
   def personNames(): List[String] =
@@ -36,4 +41,10 @@ object PersonServices extends LazyLogging {
     PersonDAO.find().resultList()
 
   def personCount(): Long = PersonDAO.count().result()
+
+  def updatePerson(person: Person): UpdateResult =
+    PersonDAO.replaceOne(person).result()
+
+  def deletePerson(person: Person): DeleteResult =
+    PersonDAO.deleteOne(person).result()
 }
