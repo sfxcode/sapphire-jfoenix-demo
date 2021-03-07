@@ -1,12 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.*?>
 <?import java.net.URL?>
-<StackPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
 
-           fx:controller="com.sfxcode.sapphire.jfoenix.demo.controller.page.HomePageController">
-    <Label styleClass="warn-label" text="Start"/>
+<StackPane xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sfxcode.sapphire.jfoenix.demo.controller.page.HomePageController">
+   <VBox spacing="10.0">
+      <children>
+         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+            <children>
+               <Label styleClass="application-label" text="Sapphire JavaFX Starter App" />
+            </children>
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets>
+         </HBox>
+         <HBox prefHeight="125.0" spacing="10.0">
+            <children>
+               <Label styleClass="homepage-label" text="App Colors" />
+               <Label styleClass="primary-label" text="Primary" />
+               <Label styleClass="primary-light-label" text="Primary Light" />
+               <Label styleClass="primary-dark-label" text="Primary Dark" />
+               <Label styleClass="secondary-label" text="Secondary" />
+               <Label styleClass="secondary-dark-label" text="Secondary Dark" />
+            </children>
+         </HBox>
+         <HBox spacing="20.0">
+            <children>
+               <Label styleClass="homepage-label" text="Other Styles" />
+                <Label styleClass="info-label" text="Info" />
+               <Label styleClass="warn-label" text="Warn" />
+               <Label styleClass="error-label" text="Error" />
+            </children>
+         </HBox>
+      </children>
+      <StackPane.margin>
+         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+      </StackPane.margin>
+   </VBox>
     <stylesheets>
         <URL value="@../../css/jfoenix-main.css" />
         <URL value="@../../css/main.css" />
