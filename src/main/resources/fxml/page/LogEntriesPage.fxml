@@ -22,9 +22,14 @@
                                 <FXTableValueFactory property="date" format="YYYY-MM-dd HH:mm:ss.SSS"/>
                             </cellValueFactory>
                         </TableColumn>
+                        <TableColumn text="Severity">
+                            <cellValueFactory>
+                                <FXTableValueFactory property="!{_self.severity().toUpperCase()}"/>
+                            </cellValueFactory>
+                        </TableColumn>
                         <TableColumn text="Topic">
                             <cellValueFactory>
-                                <FXTableValueFactory property="topic"/>
+                                <FXTableValueFactory property="Topic: !{_self.topic()}"/>
                             </cellValueFactory>
                         </TableColumn>
                         <TableColumn text="Message">
@@ -32,6 +37,7 @@
                                 <FXTableValueFactory property="message"/>
                             </cellValueFactory>
                         </TableColumn>
+
                     </columns>
                 </TableView>
             </center>

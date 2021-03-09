@@ -20,6 +20,11 @@ class LogEntriesPageController extends DataTableController with BeanConversions 
   override def initTable(tableFilter: DataTableFilter[R]): Unit = {
     super.initTable(tableFilter)
 
+    tableFilter.addSearchField(
+      "severityFilter",
+      "severity",
+      searchField = createSearchTextField(promptText = "Severity")
+    )
     tableFilter.addSearchField("topicFilter", "topic", searchField = createSearchTextField(promptText = "Topic"))
     tableFilter.addSearchField("messageFilter", "message", searchField = createSearchTextField(promptText = "Message"))
 

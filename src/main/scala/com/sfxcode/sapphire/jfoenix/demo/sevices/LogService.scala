@@ -19,6 +19,6 @@ object LogService {
   def logEntriesByTopic(topic: String): List[LogEntry] =
     LogDAO.find(Map("topic" -> topic)).resultList()
 
-  def addLogEntry(message: String, topic: String = "Application"): InsertOneResult =
-    LogDAO.insertOne(LogEntry(message, topic)).result()
+  def addLogEntry(message: String, topic: String = "Application", severity: String = "info"): InsertOneResult =
+    LogDAO.insertOne(LogEntry(message, topic, severity)).result()
 }

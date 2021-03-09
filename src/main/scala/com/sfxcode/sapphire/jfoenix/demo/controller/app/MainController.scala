@@ -110,7 +110,10 @@ class MainController extends ViewController with ToolbarStyling with LazyLogging
 
   def updatePage(pageController: ViewController, event: ActionEvent): Unit = {
     toolbarButtonClicked(event, pageController)
-    LogService.addLogEntry("controller: %s was loaded".format(pageController.getClass.getSimpleName))
+    LogService.addLogEntry(
+      "controller: %s was loaded".format(pageController.getClass.getSimpleName),
+      severity = "debug"
+    )
   }
 
   def updatePage(pageController: ViewController): Unit =
