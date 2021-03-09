@@ -25,7 +25,7 @@ libraryDependencies ++= Seq("base", "controls", "fxml", "graphics", "media", "sw
 libraryDependencies += "org.specs2" %% "specs2-core" % "4.10.6" % Test
 
 // Sapphire
-libraryDependencies += "com.sfxcode.sapphire" %% "sapphire-javafx" % "1.0.3.2"
+libraryDependencies += "com.sfxcode.sapphire" %% "sapphire-javafx" % "1.0.4"
 
 // scalafx
 libraryDependencies += "org.scalafx" %% "scalafx" % "15.0.1-R21"
@@ -38,7 +38,7 @@ libraryDependencies += "eu.hansolo" % "Medusa" % "11.5"
 
 // Persistance (MongoDB) / DAO
 
-libraryDependencies += "com.sfxcode.nosql" %% "simple-mongo" % "2.2.0"
+libraryDependencies += "com.sfxcode.nosql" %% "simple-mongo" % "2.2.1"
 
 // local java mongodb server - can be used in memory or file based - optional if a real mongodb database is available
 val MongoJavaServerVersion = "1.37.0"
