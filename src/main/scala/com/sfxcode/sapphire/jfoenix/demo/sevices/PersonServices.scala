@@ -1,20 +1,23 @@
 package com.sfxcode.sapphire.jfoenix.demo.sevices
 
-import better.files.{File, Resource}
+import com.sfxcode.nosql.mongo._
+import com.sfxcode.nosql.mongo.bson.DocumentHelper
 import com.sfxcode.sapphire.jfoenix.demo.database.Database.PersonDAO
 import com.sfxcode.sapphire.jfoenix.demo.model.Person
-import com.typesafe.scalalogging.LazyLogging
-import org.mongodb.scala.BulkWriteResult
-import com.sfxcode.nosql.mongo._
 import com.sfxcode.sapphire.jfoenix.demo.sevices.LogService.addLogEntry
+import com.typesafe.scalalogging.LazyLogging
 import org.mongodb.scala.result.{DeleteResult, UpdateResult}
+import org.mongodb.scala.{BulkWriteResult, Document, SingleObservable}
+
+import scala.collection.mutable.ArrayBuffer
+import scala.io.Source
 
 object PersonServices extends LazyLogging {
 
   def initPersonCollection(): Unit = {
     // since all database function results are observables - we have to add .result() to wait for the end of current operation
     val importResult: BulkWriteResult =
-      PersonDAO.importJsonFile(File(Resource.getUrl("data/person_list.json"))).result()
+      importJsonFile().result()
 
     // add indexes
     PersonDAO.createUniqueIndexForField("id").result()
@@ -47,4 +50,11 @@ object PersonServices extends LazyLogging {
 
   def deletePerson(person: Person): DeleteResult =
     PersonDAO.deleteOne(person).result()
+
+  def importJsonFile(): SingleObservable[BulkWriteResult] = {
+    val docs  = new ArrayBuffer[Document]()
+    val lines = Source.fromResource("data/person_list.json").getLines
+    lines.foreach(line => docs.+=(DocumentHelper.documentFromJsonString(line).get))
+    PersonDAO.Raw.bulkWriteMany(docs.toSeq)
+  }
 }
