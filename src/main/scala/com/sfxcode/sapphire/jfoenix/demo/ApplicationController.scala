@@ -5,8 +5,8 @@ import com.sfxcode.sapphire.javafx.ConfigValues
 import com.sfxcode.sapphire.javafx.application.ApplicationEnvironment
 import com.sfxcode.sapphire.javafx.controller.BaseApplicationController
 import com.sfxcode.sapphire.jfoenix.demo.controller.app.MainController
-import com.sun.javafx.css.StyleManager
 import javafx.event.ActionEvent
+import javafx.scene.{Parent, Scene}
 
 class ApplicationController extends BaseApplicationController with ConfigValues {
 
@@ -21,6 +21,12 @@ class ApplicationController extends BaseApplicationController with ConfigValues 
 
   def actionReload(event: ActionEvent): Unit = {
     logger.info("reload event called by %s".format(event.getSource))
+
+    // change stage because of JFoenix Decorator
+    val oldStage = stage
+    setStage(ApplicationEnvironment.application.createDefaultStage())
+    oldStage.close()
+
     reload()
   }
 
@@ -47,6 +53,21 @@ class ApplicationController extends BaseApplicationController with ConfigValues 
 
   def applicationName: ApplicationName =
     ApplicationName(configStringValue("application.name"))
+
+  override protected def replaceSceneContentWithNode(content: Parent, resize: Boolean = true) {
+    val decorator = new JFoenixDecorator(stage, content, true, true)
+    sceneProperty.set(new Scene(decorator, stage.widthProperty().get, stage.heightProperty().get))
+
+    decorator.setContent(content)
+    if (!stage.isShowing)
+      stage.show()
+
+    stage.setScene(scene)
+
+    if (resize)
+      stage.sizeToScene()
+  }
+
 }
 
 case class ApplicationName(name: String)

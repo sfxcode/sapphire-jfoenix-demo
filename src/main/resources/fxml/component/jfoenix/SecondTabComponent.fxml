@@ -5,7 +5,7 @@
 <?import java.net.URL?>
 <StackPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
 
-           fx:controller="com.sfxcode.sapphire.jfoenix.demo.controller.component.tab.SecondTabComponentController">
+           fx:controller="com.sfxcode.sapphire.jfoenix.demo.controller.component.jfoenix.SecondTabComponentController">
     <Label styleClass="warn-label" fx:id="infoLabel" text="%secondTab.infoText"/>
     <stylesheets>
         <URL value="@../../../css/jfoenix-main.css" />

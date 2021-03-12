@@ -6,7 +6,7 @@
 
 <?import java.net.URL?>
 <BorderPane xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.sfxcode.sapphire.jfoenix.demo.controller.page.TabPageController">
+            fx:controller="com.sfxcode.sapphire.jfoenix.demo.controller.page.UISamplePageController">
     <center>
         <StackPane fx:id="navigationContentPane"/>
     </center>
@@ -15,8 +15,8 @@
             <VBox spacing="10" id="toolbarBox">
                 <JFXToolbar maxHeight="32" fx:id="toolbar">
                     <leftItems>
-                        <JFXButton styleClass="navigation-menu" onAction="#actionShowTab" text="Tab Example" fx:id="tabButton"/>
-                        <JFXButton styleClass="navigation-menu" onAction="#actionShowTab" text="Second Button" fx:id="secondButton"/>
+                        <JFXButton styleClass="navigation-menu" onAction="#actionShowTab" text="JFoenix Elements" fx:id="jfoenixButton"/>
+                        <JFXButton styleClass="navigation-menu" onAction="#actionShowTab" text="Sapphire Elements" fx:id="sapphireButton"/>
                     </leftItems>
                     <rightItems>
 

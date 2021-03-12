@@ -1,22 +1,22 @@
 package com.sfxcode.sapphire.jfoenix.demo.controller.page
 
 import com.sfxcode.sapphire.jfoenix.demo.controller.base.AbstractNavigationController
-import com.sfxcode.sapphire.jfoenix.demo.controller.component.tab.TabViewComponentController
+import com.sfxcode.sapphire.jfoenix.demo.controller.component.jfoenix.JFoenixComponentController
 import javafx.event.ActionEvent
 import javafx.fxml.FXML
 import javafx.scene.control.Button
 
-class TabPageController extends AbstractNavigationController {
+class UISamplePageController extends AbstractNavigationController {
 
-  @FXML var tabButton: Button    = _
-  @FXML var secondButton: Button = _
+  @FXML var jfoenixButton: Button  = _
+  @FXML var sapphireButton: Button = _
 
-  lazy val tabController = getController[TabViewComponentController]()
+  lazy val tabController = getController[JFoenixComponentController]()
 
   override def didGainVisibility(): Unit = {
     super.didGainVisibility()
     navigationContentManager.updatePaneContent(tabController)
-    updateToolbarButtonStyles(tabButton)
+    updateToolbarButtonStyles(jfoenixButton)
   }
 
   def actionShowTab(event: ActionEvent) {

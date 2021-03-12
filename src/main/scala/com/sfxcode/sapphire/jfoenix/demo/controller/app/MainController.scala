@@ -9,7 +9,7 @@ import com.sfxcode.sapphire.jfoenix.demo.controller.page.person.{PersonDetailPag
 import com.sfxcode.sapphire.jfoenix.demo.controller.page.{
   HomePageController,
   LogEntriesPageController,
-  TabPageController
+  UISamplePageController
 }
 import com.sfxcode.sapphire.jfoenix.demo.sevices.LogService
 import com.typesafe.scalalogging.LazyLogging
@@ -41,7 +41,7 @@ class MainController extends ViewController with ToolbarStyling with LazyLogging
   lazy val homeController: HomePageController                 = getController[HomePageController]()
   lazy val personMasterController: PersonMasterPageController = getController[PersonMasterPageController]()
   lazy val personDetailController: PersonDetailPageController = getController[PersonDetailPageController]()
-  lazy val viewNavigationController: TabPageController        = getController[TabPageController]()
+  lazy val samplePageController: UISamplePageController       = getController[UISamplePageController]()
   lazy val logEntriesPageController: LogEntriesPageController = getController[LogEntriesPageController]()
 
   lazy val sideMenuController: SideMenuController         = getController[SideMenuController]()
@@ -99,8 +99,8 @@ class MainController extends ViewController with ToolbarStyling with LazyLogging
   def actionLoadHomeController(event: ActionEvent): Unit =
     updatePage(homeController, event)
 
-  def actionLoadViewController(event: ActionEvent): Unit =
-    updatePage(viewNavigationController, event)
+  def actionLoadSampleController(event: ActionEvent): Unit =
+    updatePage(samplePageController, event)
 
   def actionLoadLogsController(event: ActionEvent): Unit =
     updatePage(logEntriesPageController, event)

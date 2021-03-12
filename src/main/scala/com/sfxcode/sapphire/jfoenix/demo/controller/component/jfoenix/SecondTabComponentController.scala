@@ -1,4 +1,4 @@
-package com.sfxcode.sapphire.jfoenix.demo.controller.component.tab
+package com.sfxcode.sapphire.jfoenix.demo.controller.component.jfoenix
 
 import com.sfxcode.sapphire.jfoenix.demo.controller.base.AbstractViewController
 

@@ -1,4 +1,4 @@
-package com.sfxcode.sapphire.jfoenix.demo.controller.component.tab
+package com.sfxcode.sapphire.jfoenix.demo.controller.component.jfoenix
 
 import com.sfxcode.sapphire.javafx.application.ApplicationEnvironment
 import com.sfxcode.sapphire.javafx.scene.ContentManager
@@ -8,7 +8,7 @@ import javafx.fxml.FXML
 import javafx.scene.control._
 import javafx.scene.layout._
 
-class TabViewComponentController extends AbstractTabController {
+class JFoenixComponentController extends AbstractTabController {
   lazy val firstTabController: FirstTabComponentController   = getController[FirstTabComponentController]()
   lazy val secondTabController: SecondTabComponentController = getController[SecondTabComponentController]()
 
