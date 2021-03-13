@@ -1,6 +1,6 @@
 package com.sfxcode.sapphire.jfoenix.demo.controller.page.person
 
-import com.sfxcode.sapphire.javafx.controller.{SFXBaseDetailController, SFXBaseMasterController}
+import com.sfxcode.sapphire.javafx.controller.{SFXDetailController, SFXMasterController}
 import com.sfxcode.sapphire.javafx.filter.SFXDataTableFilter
 import com.sfxcode.sapphire.javafx.value.{SFXBean, SFXBeanConversions}
 import com.sfxcode.sapphire.jfoenix.demo.control.JFoenixControlFactory.{createSearchComboBox, createSearchTextField}
@@ -11,7 +11,7 @@ import javafx.collections.ObservableList
 
 import scala.reflect._
 
-class PersonMasterPageController extends SFXBaseMasterController with BaseController with SFXBeanConversions {
+class PersonMasterPageController extends SFXMasterController with BaseController with SFXBeanConversions {
   lazy val detailPageController = getController[PersonDetailPageController]()
 
   type R = Person
@@ -37,7 +37,7 @@ class PersonMasterPageController extends SFXBaseMasterController with BaseContro
     tableFilter.addSearchBox("fruitFilter", "favoriteFruit", "all fruits", createSearchComboBox())
   }
 
-  override def navigateToDetailController(detailController: SFXBaseDetailController): Unit =
+  override def navigateToDetailController(detailController: SFXDetailController): Unit =
     mainViewController.updatePage(detailPageController)
 
 }

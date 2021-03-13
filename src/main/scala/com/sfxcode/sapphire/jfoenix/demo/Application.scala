@@ -5,8 +5,8 @@ import com.jfoenix.controls.JFXDecorator
 import com.sfxcode.nosql.mongo._
 import com.sfxcode.nosql.mongo.server.LocalServer
 import com.sfxcode.sapphire.data.Configuration
-import com.sfxcode.sapphire.javafx.application.SFXBaseApplication
-import com.sfxcode.sapphire.javafx.controller.SFXBaseApplicationController
+import com.sfxcode.sapphire.javafx.application.SFXApplication
+import com.sfxcode.sapphire.javafx.controller.SFXApplicationController
 import com.sfxcode.sapphire.javafx.{BuildInfo}
 import com.sfxcode.sapphire.jfoenix.demo.database.Database.PersonDAO
 import com.sfxcode.sapphire.jfoenix.demo.sevices.{LogService, PersonServices}
@@ -15,7 +15,7 @@ import javafx.scene.layout.HBox
 import javafx.stage.Stage
 import org.mongodb.scala.BulkWriteResult
 
-object Application extends SFXBaseApplication with Configuration {
+object Application extends SFXApplication with Configuration {
   var localMongoDBServer: LocalServer = _
 
   override def title: String = "%s (%s)".format(configStringValue("project.name"), BuildInfo.version)
@@ -24,7 +24,7 @@ object Application extends SFXBaseApplication with Configuration {
 
   override def width: Int = 1000
 
-  override val applicationController: SFXBaseApplicationController = new ApplicationController
+  override val applicationController: SFXApplicationController = new ApplicationController
 
   override def applicationWillLaunch(): Unit = {
     super.applicationWillLaunch()

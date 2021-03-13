@@ -3,12 +3,12 @@ package com.sfxcode.sapphire.jfoenix.demo
 import com.jfoenix.assets.JFoenixResources
 import com.sfxcode.sapphire.data.Configuration
 import com.sfxcode.sapphire.javafx.application.SFXApplicationEnvironment
-import com.sfxcode.sapphire.javafx.controller.SFXBaseApplicationController
+import com.sfxcode.sapphire.javafx.controller.SFXApplicationController
 import com.sfxcode.sapphire.jfoenix.demo.controller.app.MainController
 import javafx.event.ActionEvent
 import javafx.scene.{Parent, Scene}
 
-class ApplicationController extends SFXBaseApplicationController with Configuration {
+class ApplicationController extends SFXApplicationController with Configuration {
 
   var lastNavigationControllerName = ""
 

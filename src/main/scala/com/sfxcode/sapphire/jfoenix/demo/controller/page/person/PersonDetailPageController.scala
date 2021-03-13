@@ -1,6 +1,6 @@
 package com.sfxcode.sapphire.jfoenix.demo.controller.page.person
 
-import com.sfxcode.sapphire.javafx.controller.{SFXBaseDetailController, SFXBaseMasterController}
+import com.sfxcode.sapphire.javafx.controller.{SFXDetailController, SFXMasterController}
 import com.sfxcode.sapphire.javafx.value.{SFXBean, SFXKeyBindings}
 import com.sfxcode.sapphire.jfoenix.demo.controller.base.BaseController
 import com.sfxcode.sapphire.jfoenix.demo.controller.widget.SaveBoxWidgetController
@@ -12,7 +12,7 @@ import javafx.scene.layout.StackPane
 
 import scala.reflect._
 
-class PersonDetailPageController extends SFXBaseDetailController with BaseController {
+class PersonDetailPageController extends SFXDetailController with BaseController {
 
   @FXML var detailPane: TitledPane = _
   @FXML var saveButton: Button     = _
@@ -32,7 +32,7 @@ class PersonDetailPageController extends SFXBaseDetailController with BaseContro
     updatePaneContent(savePane, saveController)
   }
 
-  override def navigateToMasterController(masterController: SFXBaseMasterController): Unit =
+  override def navigateToMasterController(masterController: SFXMasterController): Unit =
     mainViewController.updatePage(masterController)
 
   def updateBindings(bindings: SFXKeyBindings): Unit =

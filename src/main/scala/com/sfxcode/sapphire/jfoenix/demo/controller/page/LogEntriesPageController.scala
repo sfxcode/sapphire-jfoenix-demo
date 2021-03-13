@@ -1,6 +1,6 @@
 package com.sfxcode.sapphire.jfoenix.demo.controller.page
 
-import com.sfxcode.sapphire.javafx.controller.DataTableController
+import com.sfxcode.sapphire.javafx.controller.SFXDataTableController
 import com.sfxcode.sapphire.javafx.filter.SFXDataTableFilter
 import com.sfxcode.sapphire.javafx.value.{SFXBean, SFXBeanConversions, SFXKeyBindings}
 import com.sfxcode.sapphire.jfoenix.demo.control.JFoenixControlFactory.createSearchTextField
@@ -10,7 +10,7 @@ import javafx.collections.ObservableList
 
 import scala.reflect.{classTag, ClassTag}
 
-class LogEntriesPageController extends DataTableController with SFXBeanConversions {
+class LogEntriesPageController extends SFXDataTableController with SFXBeanConversions {
   type R = LogEntry
 
   def ct: ClassTag[LogEntry] = classTag[R]
