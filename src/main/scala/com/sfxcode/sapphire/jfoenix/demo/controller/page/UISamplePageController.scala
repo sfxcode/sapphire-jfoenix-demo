@@ -15,7 +15,7 @@ class UISamplePageController extends AbstractNavigationController {
 
   override def didGainVisibility(): Unit = {
     super.didGainVisibility()
-    navigationContentManager.updatePaneContent(tabController)
+    navigationSFXContentManager.updatePaneContent(tabController)
     updateToolbarButtonStyles(jfoenixButton)
   }
 

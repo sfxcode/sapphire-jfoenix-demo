@@ -2,8 +2,8 @@ package com.sfxcode.sapphire.jfoenix.demo.controller.app
 
 import com.jfoenix.controls.events.JFXDrawerEvent
 import com.jfoenix.controls.{JFXDrawer, JFXHamburger}
-import com.sfxcode.sapphire.javafx.controller.ViewController
-import com.sfxcode.sapphire.javafx.scene.ContentManager
+import com.sfxcode.sapphire.javafx.controller.SFXViewController
+import com.sfxcode.sapphire.javafx.scene.SFXContentManager
 import com.sfxcode.sapphire.jfoenix.demo.controller.base.ToolbarStyling
 import com.sfxcode.sapphire.jfoenix.demo.controller.page.person.{PersonDetailPageController, PersonMasterPageController}
 import com.sfxcode.sapphire.jfoenix.demo.controller.page.{
@@ -20,7 +20,7 @@ import javafx.scene.layout.StackPane
 import scalafx.Includes._
 import scalafx.scene.input.MouseEvent
 
-class MainController extends ViewController with ToolbarStyling with LazyLogging {
+class MainController extends SFXViewController with ToolbarStyling with LazyLogging {
 
   @FXML var menuBar: MenuBar = _
 
@@ -48,22 +48,22 @@ class MainController extends ViewController with ToolbarStyling with LazyLogging
   lazy val statusBarController: StatusBarController       = getController[StatusBarController]()
   lazy val rightToolbarController: RightToolbarController = getController[RightToolbarController]()
 
-  var workspaceManager: ContentManager = _
-  var sideMenuManager: ContentManager  = _
+  var workspaceManager: SFXContentManager = _
+  var sideMenuManager: SFXContentManager  = _
 
   private var counter: Int = 0
 
   override def toolbarButtonStyleClass: String = "main-menu"
 
-  override def mainContentManager: ContentManager = workspaceManager
+  override def mainSFXContentManager: SFXContentManager = workspaceManager
 
   override def didGainVisibilityFirstTime() {
     menuBar.setUseSystemMenuBar(true)
     updateToolbarButtonStyles(homeButton)
 
-    workspaceManager = ContentManager(workspacePane, this, homeController)
+    workspaceManager = SFXContentManager(workspacePane, this, homeController)
 
-    sideMenuManager = ContentManager(sideContentPane, this, sideMenuController)
+    sideMenuManager = SFXContentManager(sideContentPane, this, sideMenuController)
 
     updatePaneContent(statusPane, statusBarController)
     updatePaneContent(rightToolbarPane, rightToolbarController)
@@ -108,7 +108,7 @@ class MainController extends ViewController with ToolbarStyling with LazyLogging
   def actionLoadPersonMasterController(event: ActionEvent): Unit =
     updatePage(personMasterController, event)
 
-  def updatePage(pageController: ViewController, event: ActionEvent): Unit = {
+  def updatePage(pageController: SFXViewController, event: ActionEvent): Unit = {
     toolbarButtonClicked(event, pageController)
     LogService.addLogEntry(
       "controller: %s was loaded".format(pageController.getClass.getSimpleName),
@@ -116,6 +116,6 @@ class MainController extends ViewController with ToolbarStyling with LazyLogging
     )
   }
 
-  def updatePage(pageController: ViewController): Unit =
+  def updatePage(pageController: SFXViewController): Unit =
     workspaceManager.updatePaneContent(pageController)
 }

@@ -1,7 +1,7 @@
 package com.sfxcode.sapphire.jfoenix.demo.controller.page.person
 
-import com.sfxcode.sapphire.javafx.controller.{BaseDetailController, BaseMasterController}
-import com.sfxcode.sapphire.javafx.value.{FXBean, KeyBindings}
+import com.sfxcode.sapphire.javafx.controller.{SFXBaseDetailController, SFXBaseMasterController}
+import com.sfxcode.sapphire.javafx.value.{SFXBean, SFXKeyBindings}
 import com.sfxcode.sapphire.jfoenix.demo.controller.base.BaseController
 import com.sfxcode.sapphire.jfoenix.demo.controller.widget.SaveBoxWidgetController
 import com.sfxcode.sapphire.jfoenix.demo.model.Person
@@ -12,7 +12,7 @@ import javafx.scene.layout.StackPane
 
 import scala.reflect._
 
-class PersonDetailPageController extends BaseDetailController with BaseController {
+class PersonDetailPageController extends SFXBaseDetailController with BaseController {
 
   @FXML var detailPane: TitledPane = _
   @FXML var saveButton: Button     = _
@@ -32,13 +32,13 @@ class PersonDetailPageController extends BaseDetailController with BaseControlle
     updatePaneContent(savePane, saveController)
   }
 
-  override def navigateToMasterController(masterController: BaseMasterController): Unit =
+  override def navigateToMasterController(masterController: SFXBaseMasterController): Unit =
     mainViewController.updatePage(masterController)
 
-  def updateBindings(bindings: KeyBindings): Unit =
-    formAdapter.addBindings(KeyBindings.forClass[Person]())
+  def updateBindings(bindings: SFXKeyBindings): Unit =
+    formAdapter.addBindings(SFXKeyBindings.forClass[Person]())
 
-  override def updateBean(bean: FXBean[Person]): Unit = {
+  override def updateBean(bean: SFXBean[Person]): Unit = {
     super.updateBean(bean)
     detailPane.setText("Edit: %s".format(bean.wrappedData.name))
   }

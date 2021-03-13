@@ -1,11 +1,11 @@
 package com.sfxcode.sapphire.jfoenix.demo.controller.widget
 
-import com.sfxcode.sapphire.javafx.controller.{BaseDetailController, ViewController}
+import com.sfxcode.sapphire.javafx.controller.{SFXBaseDetailController, SFXViewController}
 import javafx.event.ActionEvent
 import javafx.fxml.FXML
 import javafx.scene.control.Button
 
-class SaveBoxWidgetController extends ViewController {
+class SaveBoxWidgetController extends SFXViewController {
 
   @FXML
   var saveButton: Button = _
@@ -16,7 +16,7 @@ class SaveBoxWidgetController extends ViewController {
   @FXML
   var revertButton: Button = _
 
-  private def detailController: BaseDetailController = parent.asInstanceOf[BaseDetailController]
+  private def detailController: SFXBaseDetailController = parent.asInstanceOf[SFXBaseDetailController]
 
   private def beanAdapter = detailController.formAdapter
 

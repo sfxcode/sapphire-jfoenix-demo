@@ -1,7 +1,7 @@
 package com.sfxcode.sapphire.jfoenix.demo.controller.component.jfoenix
 
-import com.sfxcode.sapphire.javafx.application.ApplicationEnvironment
-import com.sfxcode.sapphire.javafx.scene.ContentManager
+import com.sfxcode.sapphire.javafx.application.SFXApplicationEnvironment
+import com.sfxcode.sapphire.javafx.scene.SFXContentManager
 import com.sfxcode.sapphire.jfoenix.demo.controller.base.AbstractTabController
 import com.sfxcode.sapphire.jfoenix.demo.{ApplicationController, ApplicationName}
 import javafx.fxml.FXML
@@ -12,11 +12,11 @@ class JFoenixComponentController extends AbstractTabController {
   lazy val firstTabController: FirstTabComponentController   = getController[FirstTabComponentController]()
   lazy val secondTabController: SecondTabComponentController = getController[SecondTabComponentController]()
 
-  var firstTabContentManager: ContentManager  = _
-  var secondTabContentManager: ContentManager = _
+  var firstTabSFXContentManager: SFXContentManager  = _
+  var secondTabSFXContentManager: SFXContentManager = _
 
   var applicationName: ApplicationName =
-    ApplicationEnvironment.applicationController[ApplicationController].applicationName
+    SFXApplicationEnvironment.applicationController[ApplicationController].applicationName
 
   @FXML var firstTab: StackPane  = _
   @FXML var secondTab: StackPane = _
@@ -25,8 +25,8 @@ class JFoenixComponentController extends AbstractTabController {
 
   override def didGainVisibilityFirstTime(): Unit = {
     super.didGainVisibilityFirstTime()
-    firstTabContentManager = ContentManager(firstTab, this, firstTabController)
-    secondTabContentManager = ContentManager(secondTab, this, secondTabController)
+    firstTabSFXContentManager = SFXContentManager(firstTab, this, firstTabController)
+    secondTabSFXContentManager = SFXContentManager(secondTab, this, secondTabController)
     applicationNameLabel.setText(applicationName.name)
   }
 

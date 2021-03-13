@@ -1,14 +1,14 @@
 package com.sfxcode.sapphire.jfoenix.demo
 
 import com.jfoenix.assets.JFoenixResources
-import com.sfxcode.sapphire.javafx.ConfigValues
-import com.sfxcode.sapphire.javafx.application.ApplicationEnvironment
-import com.sfxcode.sapphire.javafx.controller.BaseApplicationController
+import com.sfxcode.sapphire.data.Configuration
+import com.sfxcode.sapphire.javafx.application.SFXApplicationEnvironment
+import com.sfxcode.sapphire.javafx.controller.SFXBaseApplicationController
 import com.sfxcode.sapphire.jfoenix.demo.controller.app.MainController
 import javafx.event.ActionEvent
 import javafx.scene.{Parent, Scene}
 
-class ApplicationController extends BaseApplicationController with ConfigValues {
+class ApplicationController extends SFXBaseApplicationController with Configuration {
 
   var lastNavigationControllerName = ""
 
@@ -24,7 +24,7 @@ class ApplicationController extends BaseApplicationController with ConfigValues 
 
     // change stage because of JFoenix Decorator
     val oldStage = stage
-    setStage(ApplicationEnvironment.application.createDefaultStage())
+    setStage(SFXApplicationEnvironment.application.createDefaultStage())
     oldStage.close()
 
     reload()
@@ -32,8 +32,8 @@ class ApplicationController extends BaseApplicationController with ConfigValues 
 
   private def reload(): Unit = {
     // reset bundles
-    ApplicationEnvironment.clearResourceBundleCache()
-    ApplicationEnvironment.loadResourceBundle("bundles/application")
+    SFXApplicationEnvironment.clearResourceBundleCache()
+    SFXApplicationEnvironment.loadResourceBundle("bundles/application")
 
     // replace scene content with new MainViewController instance
     reloadStyles()
