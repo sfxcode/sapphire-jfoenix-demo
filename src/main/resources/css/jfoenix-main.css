@@ -339,7 +339,7 @@
 
 .jfx-decorator .resize-border {
   -fx-border-color: -fx-decorator-color;
-  -fx-border-width: 0 4 4 4; }
+  -fx-border-width: 0 0 0 0; }
 
 .jfx-decorator .jfx-decorator-title-container .jfx-decorator-text {
   -fx-fill: WHITE;

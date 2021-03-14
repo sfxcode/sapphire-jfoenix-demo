@@ -25,7 +25,7 @@ libraryDependencies ++= Seq("base", "controls", "fxml", "graphics", "media", "sw
 libraryDependencies += "org.specs2" %% "specs2-core" % "4.10.6" % Test
 
 // Sapphire
-libraryDependencies += "com.sfxcode.sapphire" %% "sapphire-javafx" % "1.1.0-SNAPSHOT"
+libraryDependencies += "com.sfxcode.sapphire" %% "sapphire-javafx" % "1.1.1"
 
 // scalafx
 libraryDependencies += "org.scalafx" %% "scalafx" % "15.0.1-R21"

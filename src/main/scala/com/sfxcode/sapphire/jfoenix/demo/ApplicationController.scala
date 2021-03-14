@@ -45,7 +45,8 @@ class ApplicationController extends SFXApplicationController with Configuration 
     stylesheets.clear()
     val jfoenixFontsCSS: String  = JFoenixResources.load("css/jfoenix-fonts.css").toExternalForm
     val jfoenixDesignCSS: String = JFoenixResources.load("css/jfoenix-design.css").toExternalForm
-    stylesheets.addAll(jfoenixFontsCSS, jfoenixDesignCSS)
+    val jfoenixMainCSS: String   = getClass.getResource("/css/jfoenix-main.css").toExternalForm
+    stylesheets.addAll(jfoenixFontsCSS, jfoenixDesignCSS, jfoenixMainCSS)
 
     logger.info("reload finished")
 
