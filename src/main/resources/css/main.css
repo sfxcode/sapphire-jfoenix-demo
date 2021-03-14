@@ -11,6 +11,13 @@
   -fx-font-weight: NORMAL;
   -fx-text-fill: #444; }
 
+.status-bar-box {
+  -fx-padding: 5, 5;
+  -fx-background-color: #673AB7; }
+  .status-bar-box Label {
+    -fx-text-fill: white;
+    -fx-font-size: 1.2em; }
+
 .jfx-tab-pane .headers-region {
   -fx-background-color: #673AB7; }
 
