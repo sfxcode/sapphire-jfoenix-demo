@@ -43,7 +43,7 @@ Example code to package on Mac.
 ~/Library/Caches/Coursier/jvm/adopt@1.15.0-1/Contents/Home/bin/jpackage \
   --type dmg \
   --verbose \
-  --input dist \
+  --input input \
   --dest out \
   --name jfoenix-demo \
   --main-jar sapphire-jfoenix-demo_2.13-2.0.2.jar \
